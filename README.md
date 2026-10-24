@@ -21,6 +21,7 @@ El proceso evita frameworks pesados de frontend o capturas de pantalla de Chrome
 
 - **Node.js**: Versión 20 o superior.
 - **FFmpeg**: Instalado en el sistema y visible en PATH o en las rutas estándar del sistema operativo.
+- **Git LFS**: Para descargar los vídeos de muestra en `ejemplo/` si deseas reproducirlos localmente.
 
 ---
 
@@ -30,6 +31,7 @@ El proceso evita frameworks pesados de frontend o capturas de pantalla de Chrome
    ```bash
    git clone https://github.com/Totopo27/vivid.git
    cd vivid
+   git lfs pull
    npm install
    ```
 
