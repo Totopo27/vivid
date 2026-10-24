@@ -1,0 +1,28 @@
+{
+  "name": "vivid",
+  "productName": "Vivid",
+  "version": "2.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Motor de renderizado determinista de vídeos 3D verticales.",
+  "imports": {
+    "#kit": "./motor/kit/index.js",
+    "#voz": "./motor/lib/voz-actual.js",
+    "#estilo": "./motor/lib/estilo-actual.js"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "0.1.97"
+  },
+  "scripts": {
+    "pruebas": "node motor/pruebas.mjs",
+    "marca": "node motor/marca.mjs",
+    "comprobar": "node motor/comprobar.mjs",
+    "doctor": "node motor/doctor.mjs",
+    "clave": "node motor/clave.mjs",
+    "muestras": "node motor/muestras.mjs",
+    "empaqueta": "node motor/empaqueta.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

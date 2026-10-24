@@ -1,0 +1,19 @@
+{
+  "titulo": "La noche que nunca se grabó",
+  "idioma": "es",
+  "look": "espacio",
+  "subtitulos": { "estilo": "caja", "posicion": "arriba" },
+  "voz": { "id": "851ejYcv2BoNPjrkw93G", "modelo": "eleven_v4", "estabilidad": 0.35, "similitud": 0.7, "estilo": 0, "velocidad": 1 },
+  "frases": [
+    { "texto": "¿Por qué cuando sales y bebes mucho, al día siguiente no te acuerdas de nada?", "clave": "nada", "hook": true },
+    { "texto": "No es que lo hayas olvidado: es que tu cerebro nunca llegó a grabarlo.", "clave": "grabarlo", "hook": true },
+    { "texto": "Dentro de tu cabeza tienes una grabadora: el hipocampo.", "clave": "hipocampo" },
+    { "texto": "Lo que vives aguanta solo unos segundos, hasta que él lo copia a la memoria que dura años.", "clave": "copia" },
+    { "texto": "Pero si bebes mucho y deprisa, el alcohol te inunda la sangre de golpe y apaga sus neuronas.", "clave": "apaga" },
+    { "texto": "Tú sigues hablando y riendo, porque esos segundos funcionan, pero nada se copia.", "clave": "copia" },
+    { "texto": "Es como grabar con el móvil lleno: la pantalla lo enseña todo, pero no guarda nada.", "clave": "lleno" },
+    { "texto": "Por eso, a la mitad de los que les pasa, lo siguiente que recuerdan es despertarse por la mañana.", "clave": "despertarse" },
+    { "texto": "Así que no busques esa noche: no se perdió, es que nunca entró.", "clave": "entró" },
+    { "texto": "Envíaselo a ese amigo que siempre dice que él se acuerda de todo.", "clave": "todo" }
+  ]
+}

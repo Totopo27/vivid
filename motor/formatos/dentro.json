@@ -1,0 +1,31 @@
+{
+  "nombre": "dentro",
+  "titulo": "Por dentro",
+  "para": "Cuando la idea es cómo funciona algo por dentro (un aparato de casa, una parte del cuerpo, una máquina), paso a paso, y cada paso se puede ver pasar.",
+  "frases": [
+    { "papel": "lo sorprendente de cómo funciona, con el nombre de la cosa y algo que quien mira conoce", "ejemplo": "Tu microondas funciona con las mismas ondas que el wifi de tu casa.", "hook": true },
+    { "papel": "la pregunta que eso deja, como la haría quien mira", "ejemplo": "¿Entonces por qué el wifi no te cocina a ti?", "hook": true },
+    { "papel": "la primera parte de la respuesta, corta: lo demás queda para el final", "ejemplo": "Porque el microondas las lanza miles de veces más fuertes." },
+    { "papel": "la primera pieza por dentro: cómo se llama y qué hace", "ejemplo": "Las fabrica una pieza llamada magnetrón, y las paredes de metal las rebotan como espejos." },
+    { "papel": "la siguiente pieza: lo que pasa en ella", "ejemplo": "Ni por la puerta se escapan: su rejilla tiene agujeros más pequeños que las ondas, y no caben." },
+    { "papel": "lo que pasa al final del camino, en lo que se calienta, se mueve o cambia", "ejemplo": "Al chocar con la comida, sacuden su agua de un lado a otro, miles de millones de veces por segundo." },
+    { "papel": "la comparación con algo de casa, con su frase entera", "ejemplo": "Y tanto meneo la calienta, como tus manos cuando te las frotas." },
+    { "papel": "el fallo o la sorpresa, comprobada: el segundo «¡hala!»", "ejemplo": "Pero no calientan igual en todas partes: si quitas el plato que gira y metes chocolate, se derrite a manchas." },
+    { "papel": "la pieza que lo arregla, y por qué está ahí", "ejemplo": "Por eso el plato da vueltas: para que todo pase por los puntos que queman." },
+    { "papel": "el remate: contesta del todo la pregunta del hook y le da la vuelta", "ejemplo": "Así que lo que calienta tu sopa es la misma onda que tu wifi: solo que a tope y encerrada en una caja." },
+    { "papel": "el cierre del creador, de preferencias.md, tal cual", "ejemplo": "Envíaselo a ese amigo que tiene miedo de ponerse delante del microondas." }
+  ],
+  "plan": [
+    "Fotograma 0: la cosa de casa funcionando, que se vuelve de cristal para que se vea lo de dentro (el microondas encendido, con las ondas rebotando dentro y el router al lado echando las mismas). Sigue.",
+    "La pregunta pasando, exagerada, en el mismo sitio (la cámara va hasta el router: a su lado, una taza de té bañada en ondas sigue fría). No se corta.",
+    "Sin corte desde la pregunta: la respuesta a medias, con las dos cosas juntas para medirlas (las onditas del router al lado de la ola enorme que sale del magnetrón). Sigue.",
+    "La cámara entra en la cosa y recorre la primera pieza haciendo su trabajo (el magnetrón dispara y las ondas rebotan en las paredes como en espejos). La cámara viaja con una onda.",
+    "La siguiente pieza, en su paso (una onda llega a la rejilla de la puerta y no cabe por los agujeros; la luz sí sale). La cámara se acerca. Sigue.",
+    "Lo que pasa en el material, de muy cerca (dentro de la sopa, el agua se sacude de un lado a otro y empieza a echar vapor). La cámara entra más. Sigue.",
+    "Corte a la comparación de casa, en su sitio y con su frase entera (dos manos se frotan en una calle fría y echan vaho). Reposa antes de volver.",
+    "Corte a la comprobación, el segundo «¡hala!» (sin el plato que gira, una tableta de chocolate se derrite solo a manchas). Reposa.",
+    "La pieza que lo arregla, haciéndolo (el plato da vueltas y cada trozo pasa por las manchas que queman). La cámara se aleja un poco. Sigue.",
+    "El remate: la cosa entera con lo que ahora se sabe (el microondas y el router juntos: la misma onda, suelta en uno, encerrada y a tope en el otro). La cámara se aleja y reposa.",
+    "El cierre: la cosa del vídeo una última vez mientras la cámara se aleja; el último fotograma enlaza con el primero."
+  ]
+}

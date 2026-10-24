@@ -1,0 +1,10 @@
+# El texto, con saltos de línea LF en todos los sistemas: la carpeta (y su zip) sale igual desde Mac, Windows o Linux.
+* text=auto eol=lf
+# Lo que no es texto, tal cual.
+*.jpg binary
+*.png binary
+*.mp4 binary
+*.mp3 binary
+*.wav binary
+*.ttf binary
+*.mp4 filter=lfs diff=lfs merge=lfs -text

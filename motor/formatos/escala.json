@@ -1,0 +1,29 @@
+{
+  "nombre": "escala",
+  "titulo": "La escala",
+  "para": "Cuando lo sorprendente es un número enorme o diminuto (una probabilidad, un tamaño, una distancia, una cantidad) que solo se entiende viéndolo crecer desde algo de casa.",
+  "frases": [
+    { "papel": "lo que mide el número, con su nombre, y que eso es lo que se ve: nunca la cifra delante", "ejemplo": "Esto es lo difícil que es que te toque el Euromillones.", "hook": true },
+    { "papel": "la cifra, dicha una vez, y la promesa de enseñarla: deja la pregunta abierta", "ejemplo": "Una posibilidad entre 140 millones, y ese número no se entiende hasta que lo ves.", "hook": true },
+    { "papel": "la unidad: una cosa de casa que vale por uno", "ejemplo": "Imagina que cada combinación es un folio, y que solo uno tiene premio." },
+    { "papel": "la regla de casa: cuánto ocupan unas pocas, algo que el que mira ha tenido en la mano", "ejemplo": "Un paquete de 500 folios, como el de la impresora, mide cinco centímetros." },
+    { "papel": "crece: pasa por cosas que todos conocen, de menos a más", "ejemplo": "Ahora apila 140 millones: la torre pasa los rascacielos, las nubes, el Everest... y sigue." },
+    { "papel": "el tamaño final, sentido: el segundo «¡hala!»", "ejemplo": "No se para hasta los 14 kilómetros, más alto que donde vuelan los aviones." },
+    { "papel": "dónde está lo que importa dentro de esa escala", "ejemplo": "Y en algún sitio de esa torre está el único folio con premio." },
+    { "papel": "lo que hace el que mira, como una acción a esa escala", "ejemplo": "Jugar una apuesta es meter la mano a ciegas en la torre y sacar uno." },
+    { "papel": "el remate: la cifra del hook ya no es un número, es la imagen", "ejemplo": "Así que esa «una entre 140 millones» ya no es un número: es un folio perdido en una torre de catorce kilómetros." },
+    { "papel": "el cierre del creador, de preferencias.md, tal cual", "ejemplo": "Envíaselo a ese amigo que cada semana dice que esta vez sí." }
+  ],
+  "plan": [
+    "La cámara viaja deprisa a lo largo de la cosa enorme desde el fotograma 0, sin ver dónde acaba (sube pegada a una torre de folios blancos que atraviesa las nubes). Nada de un número que corre. Sigue.",
+    "La cámara frena y cae a lo pequeño mientras la cumbre se pierde arriba (baja por la torre hasta la base). Sigue, o corte en la palabra que trae el sitio de casa.",
+    "La unidad, sola, grande y quieta medio segundo (un folio en una mesa con su marca de premio en oro). La cámara se acerca despacio.",
+    "La regla de casa, en el mismo sitio (el paquete de la impresora cae en la mesa; una regla a su lado: cinco centímetros). Sigue.",
+    "Crece delante de la cámara por etapas que se reconocen: cada una llega, frena y se queda, y se van sumando (rascacielos, nubes, el Everest). La cámara sube con la punta.",
+    "El tamaño final, junto a algo que todos conocen (un avión cruza por debajo de la cumbre, que sigue más arriba). La cámara se aleja hasta ver la torre entera.",
+    "Dentro de la escala, lo que importa (la cámara baja por la torre y un folio brilla, chiquito, en medio). Sigue.",
+    "Lo que hace el que mira, como una acción a esa escala (una mano entra a ciegas en la torre y saca un folio en blanco). Corte solo si cambia de sitio.",
+    "El remate: lo de casa y lo enorme en un solo plano (el folio en la mano y, detrás, la torre que no acaba). La cámara se aleja despacio y reposa.",
+    "El cierre: la torre entera una última vez mientras la cámara se aleja; el último fotograma enlaza con el primero."
+  ]
+}

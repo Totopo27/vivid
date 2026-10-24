@@ -1,0 +1,1093 @@
+{
+  "firma": "d0bf130cd4ed",
+  "duracion": 49.2,
+  "frases": [
+    {
+      "n": 1,
+      "texto": "Esta estrella es verde, y no debería existir.",
+      "clave": "verde",
+      "inicio": 0,
+      "fin": 2.656
+    },
+    {
+      "n": 2,
+      "texto": "Las estrellas son rojas, amarillas, blancas o azules, pero nunca verdes.",
+      "clave": "nunca",
+      "inicio": 2.72,
+      "fin": 7.8
+    },
+    {
+      "n": 3,
+      "texto": "¿Qué le ha pasado a esta?",
+      "clave": "esta",
+      "inicio": 7.84,
+      "fin": 9.28
+    },
+    {
+      "n": 4,
+      "texto": "Que se murió.",
+      "clave": "murió",
+      "inicio": 9.32,
+      "fin": 10.4
+    },
+    {
+      "n": 5,
+      "texto": "Esto es el cadáver de una estrella como el Sol: una bola del tamaño de la Tierra que pesa como medio Sol.",
+      "clave": "Tierra",
+      "inicio": 10.48,
+      "fin": 16.88
+    },
+    {
+      "n": 6,
+      "texto": "Sus planetas no salieron enteros: sus trozos se quedaron girando a su alrededor, y fueron cayendo sobre ella.",
+      "clave": "cayendo",
+      "inicio": 16.96,
+      "fin": 23.86
+    },
+    {
+      "n": 7,
+      "texto": "Y esos trozos iban cargados de sodio: lo mismo que tienes en el salero.",
+      "clave": "salero",
+      "inicio": 23.92,
+      "fin": 28.24
+    },
+    {
+      "n": 8,
+      "texto": "Su aire es tan espeso como el agua, y ahí ese sodio no deja salir el naranja de su luz.",
+      "clave": "naranja",
+      "inicio": 28.293,
+      "fin": 34.16
+    },
+    {
+      "n": 9,
+      "texto": "Y una estrella sin naranja... se ve verde.",
+      "clave": "verde",
+      "inicio": 34.2,
+      "fin": 37.12
+    },
+    {
+      "n": 10,
+      "texto": "Así que no es verde de nacimiento: es verde por lo que se comió, lo que quedaba de sus planetas.",
+      "clave": "comió",
+      "inicio": 37.2,
+      "fin": 43.68
+    },
+    {
+      "n": 11,
+      "texto": "Envíaselo a ese amigo que cree que en el espacio ya está todo descubierto.",
+      "clave": "descubierto",
+      "inicio": 44.32,
+      "fin": 48.4
+    }
+  ],
+  "palabras": [
+    {
+      "texto": "Esta",
+      "inicio": 0,
+      "fin": 0.15,
+      "frase": 1,
+      "clave": false
+    },
+    {
+      "texto": "estrella",
+      "inicio": 0.15,
+      "fin": 0.24,
+      "frase": 1,
+      "clave": false
+    },
+    {
+      "texto": "es",
+      "inicio": 0.32,
+      "fin": 0.373,
+      "frase": 1,
+      "clave": false
+    },
+    {
+      "texto": "verde,",
+      "inicio": 0.4,
+      "fin": 0.8,
+      "frase": 1,
+      "clave": true
+    },
+    {
+      "texto": "y",
+      "inicio": 1.12,
+      "fin": 1.2,
+      "frase": 1,
+      "clave": false
+    },
+    {
+      "texto": "no",
+      "inicio": 1.28,
+      "fin": 1.64,
+      "frase": 1,
+      "clave": false
+    },
+    {
+      "texto": "debería",
+      "inicio": 1.68,
+      "fin": 2.133,
+      "frase": 1,
+      "clave": false
+    },
+    {
+      "texto": "existir.",
+      "inicio": 2.187,
+      "fin": 2.656,
+      "frase": 1,
+      "clave": false
+    },
+    {
+      "texto": "Las",
+      "inicio": 2.72,
+      "fin": 3.16,
+      "frase": 2,
+      "clave": false
+    },
+    {
+      "texto": "estrellas",
+      "inicio": 3.36,
+      "fin": 3.52,
+      "frase": 2,
+      "clave": false
+    },
+    {
+      "texto": "son",
+      "inicio": 3.6,
+      "fin": 3.68,
+      "frase": 2,
+      "clave": false
+    },
+    {
+      "texto": "rojas,",
+      "inicio": 3.733,
+      "fin": 4.12,
+      "frase": 2,
+      "clave": false
+    },
+    {
+      "texto": "amarillas,",
+      "inicio": 4.16,
+      "fin": 4.96,
+      "frase": 2,
+      "clave": false
+    },
+    {
+      "texto": "blancas",
+      "inicio": 5.2,
+      "fin": 5.76,
+      "frase": 2,
+      "clave": false
+    },
+    {
+      "texto": "o",
+      "inicio": 5.8,
+      "fin": 5.84,
+      "frase": 2,
+      "clave": false
+    },
+    {
+      "texto": "azules,",
+      "inicio": 5.92,
+      "fin": 6.4,
+      "frase": 2,
+      "clave": false
+    },
+    {
+      "texto": "pero",
+      "inicio": 6.44,
+      "fin": 6.72,
+      "frase": 2,
+      "clave": false
+    },
+    {
+      "texto": "nunca",
+      "inicio": 6.8,
+      "fin": 7.2,
+      "frase": 2,
+      "clave": true
+    },
+    {
+      "texto": "verdes.",
+      "inicio": 7.28,
+      "fin": 7.8,
+      "frase": 2,
+      "clave": false
+    },
+    {
+      "texto": "¿Qué",
+      "inicio": 7.84,
+      "fin": 8.08,
+      "frase": 3,
+      "clave": false
+    },
+    {
+      "texto": "le",
+      "inicio": 8.16,
+      "fin": 8.64,
+      "frase": 3,
+      "clave": false
+    },
+    {
+      "texto": "ha",
+      "inicio": 8.68,
+      "fin": 8.707,
+      "frase": 3,
+      "clave": false
+    },
+    {
+      "texto": "pasado",
+      "inicio": 8.72,
+      "fin": 8.88,
+      "frase": 3,
+      "clave": false
+    },
+    {
+      "texto": "a",
+      "inicio": 8.96,
+      "fin": 8.987,
+      "frase": 3,
+      "clave": false
+    },
+    {
+      "texto": "esta?",
+      "inicio": 9.013,
+      "fin": 9.28,
+      "frase": 3,
+      "clave": true
+    },
+    {
+      "texto": "Que",
+      "inicio": 9.32,
+      "fin": 9.48,
+      "frase": 4,
+      "clave": false
+    },
+    {
+      "texto": "se",
+      "inicio": 9.54,
+      "fin": 9.68,
+      "frase": 4,
+      "clave": false
+    },
+    {
+      "texto": "murió.",
+      "inicio": 10.16,
+      "fin": 10.4,
+      "frase": 4,
+      "clave": true
+    },
+    {
+      "texto": "Esto",
+      "inicio": 10.48,
+      "fin": 10.64,
+      "frase": 5,
+      "clave": false
+    },
+    {
+      "texto": "es",
+      "inicio": 10.8,
+      "fin": 11.36,
+      "frase": 5,
+      "clave": false
+    },
+    {
+      "texto": "el",
+      "inicio": 11.44,
+      "fin": 11.6,
+      "frase": 5,
+      "clave": false
+    },
+    {
+      "texto": "cadáver",
+      "inicio": 11.68,
+      "fin": 12.16,
+      "frase": 5,
+      "clave": false
+    },
+    {
+      "texto": "de",
+      "inicio": 12.187,
+      "fin": 12.24,
+      "frase": 5,
+      "clave": false
+    },
+    {
+      "texto": "una",
+      "inicio": 12.32,
+      "fin": 12.48,
+      "frase": 5,
+      "clave": false
+    },
+    {
+      "texto": "estrella",
+      "inicio": 12.52,
+      "fin": 12.827,
+      "frase": 5,
+      "clave": false
+    },
+    {
+      "texto": "como",
+      "inicio": 12.853,
+      "fin": 13.024,
+      "frase": 5,
+      "clave": false
+    },
+    {
+      "texto": "el",
+      "inicio": 13.072,
+      "fin": 13.2,
+      "frase": 5,
+      "clave": false
+    },
+    {
+      "texto": "Sol:",
+      "inicio": 13.22,
+      "fin": 13.36,
+      "frase": 5,
+      "clave": false
+    },
+    {
+      "texto": "una",
+      "inicio": 13.4,
+      "fin": 13.573,
+      "frase": 5,
+      "clave": false
+    },
+    {
+      "texto": "bola",
+      "inicio": 13.627,
+      "fin": 14.293,
+      "frase": 5,
+      "clave": false
+    },
+    {
+      "texto": "del",
+      "inicio": 14.347,
+      "fin": 14.48,
+      "frase": 5,
+      "clave": false
+    },
+    {
+      "texto": "tamaño",
+      "inicio": 14.533,
+      "fin": 14.8,
+      "frase": 5,
+      "clave": false
+    },
+    {
+      "texto": "de",
+      "inicio": 14.88,
+      "fin": 15.072,
+      "frase": 5,
+      "clave": false
+    },
+    {
+      "texto": "la",
+      "inicio": 15.104,
+      "fin": 15.168,
+      "frase": 5,
+      "clave": false
+    },
+    {
+      "texto": "Tierra",
+      "inicio": 15.2,
+      "fin": 15.36,
+      "frase": 5,
+      "clave": true
+    },
+    {
+      "texto": "que",
+      "inicio": 15.44,
+      "fin": 15.58,
+      "frase": 5,
+      "clave": false
+    },
+    {
+      "texto": "pesa",
+      "inicio": 15.64,
+      "fin": 15.867,
+      "frase": 5,
+      "clave": false
+    },
+    {
+      "texto": "como",
+      "inicio": 15.893,
+      "fin": 16.107,
+      "frase": 5,
+      "clave": false
+    },
+    {
+      "texto": "medio",
+      "inicio": 16.16,
+      "fin": 16.5,
+      "frase": 5,
+      "clave": false
+    },
+    {
+      "texto": "Sol.",
+      "inicio": 16.56,
+      "fin": 16.88,
+      "frase": 5,
+      "clave": false
+    },
+    {
+      "texto": "Sus",
+      "inicio": 16.96,
+      "fin": 17.2,
+      "frase": 6,
+      "clave": false
+    },
+    {
+      "texto": "planetas",
+      "inicio": 17.28,
+      "fin": 18.18,
+      "frase": 6,
+      "clave": false
+    },
+    {
+      "texto": "no",
+      "inicio": 18.2,
+      "fin": 18.24,
+      "frase": 6,
+      "clave": false
+    },
+    {
+      "texto": "salieron",
+      "inicio": 18.32,
+      "fin": 18.827,
+      "frase": 6,
+      "clave": false
+    },
+    {
+      "texto": "enteros:",
+      "inicio": 18.853,
+      "fin": 19.312,
+      "frase": 6,
+      "clave": false
+    },
+    {
+      "texto": "sus",
+      "inicio": 19.344,
+      "fin": 19.44,
+      "frase": 6,
+      "clave": false
+    },
+    {
+      "texto": "trozos",
+      "inicio": 19.52,
+      "fin": 20.16,
+      "frase": 6,
+      "clave": false
+    },
+    {
+      "texto": "se",
+      "inicio": 20.24,
+      "fin": 20.347,
+      "frase": 6,
+      "clave": false
+    },
+    {
+      "texto": "quedaron",
+      "inicio": 20.4,
+      "fin": 20.86,
+      "frase": 6,
+      "clave": false
+    },
+    {
+      "texto": "girando",
+      "inicio": 20.88,
+      "fin": 21.2,
+      "frase": 6,
+      "clave": false
+    },
+    {
+      "texto": "a",
+      "inicio": 21.28,
+      "fin": 21.32,
+      "frase": 6,
+      "clave": false
+    },
+    {
+      "texto": "su",
+      "inicio": 21.36,
+      "fin": 21.48,
+      "frase": 6,
+      "clave": false
+    },
+    {
+      "texto": "alrededor,",
+      "inicio": 21.54,
+      "fin": 21.973,
+      "frase": 6,
+      "clave": false
+    },
+    {
+      "texto": "y",
+      "inicio": 22.027,
+      "fin": 22.08,
+      "frase": 6,
+      "clave": false
+    },
+    {
+      "texto": "fueron",
+      "inicio": 22.14,
+      "fin": 22.72,
+      "frase": 6,
+      "clave": false
+    },
+    {
+      "texto": "cayendo",
+      "inicio": 22.8,
+      "fin": 23.16,
+      "frase": 6,
+      "clave": true
+    },
+    {
+      "texto": "sobre",
+      "inicio": 23.2,
+      "fin": 23.54,
+      "frase": 6,
+      "clave": false
+    },
+    {
+      "texto": "ella.",
+      "inicio": 23.6,
+      "fin": 23.86,
+      "frase": 6,
+      "clave": false
+    },
+    {
+      "texto": "Y",
+      "inicio": 23.92,
+      "fin": 24.04,
+      "frase": 7,
+      "clave": false
+    },
+    {
+      "texto": "esos",
+      "inicio": 24.07,
+      "fin": 24.24,
+      "frase": 7,
+      "clave": false
+    },
+    {
+      "texto": "trozos",
+      "inicio": 24.8,
+      "fin": 25.04,
+      "frase": 7,
+      "clave": false
+    },
+    {
+      "texto": "iban",
+      "inicio": 25.12,
+      "fin": 25.36,
+      "frase": 7,
+      "clave": false
+    },
+    {
+      "texto": "cargados",
+      "inicio": 25.44,
+      "fin": 26,
+      "frase": 7,
+      "clave": false
+    },
+    {
+      "texto": "de",
+      "inicio": 26.027,
+      "fin": 26.08,
+      "frase": 7,
+      "clave": false
+    },
+    {
+      "texto": "sodio:",
+      "inicio": 26.14,
+      "fin": 26.48,
+      "frase": 7,
+      "clave": false
+    },
+    {
+      "texto": "lo",
+      "inicio": 26.56,
+      "fin": 26.68,
+      "frase": 7,
+      "clave": false
+    },
+    {
+      "texto": "mismo",
+      "inicio": 26.72,
+      "fin": 27.32,
+      "frase": 7,
+      "clave": false
+    },
+    {
+      "texto": "que",
+      "inicio": 27.36,
+      "fin": 27.54,
+      "frase": 7,
+      "clave": false
+    },
+    {
+      "texto": "tienes",
+      "inicio": 27.56,
+      "fin": 27.68,
+      "frase": 7,
+      "clave": false
+    },
+    {
+      "texto": "en",
+      "inicio": 27.76,
+      "fin": 27.904,
+      "frase": 7,
+      "clave": false
+    },
+    {
+      "texto": "el",
+      "inicio": 27.928,
+      "fin": 27.976,
+      "frase": 7,
+      "clave": false
+    },
+    {
+      "texto": "salero.",
+      "inicio": 28,
+      "fin": 28.24,
+      "frase": 7,
+      "clave": true
+    },
+    {
+      "texto": "Su",
+      "inicio": 28.293,
+      "fin": 28.4,
+      "frase": 8,
+      "clave": false
+    },
+    {
+      "texto": "aire",
+      "inicio": 28.453,
+      "fin": 29.2,
+      "frase": 8,
+      "clave": false
+    },
+    {
+      "texto": "es",
+      "inicio": 29.24,
+      "fin": 29.36,
+      "frase": 8,
+      "clave": false
+    },
+    {
+      "texto": "tan",
+      "inicio": 29.42,
+      "fin": 29.6,
+      "frase": 8,
+      "clave": false
+    },
+    {
+      "texto": "espeso",
+      "inicio": 29.68,
+      "fin": 30.08,
+      "frase": 8,
+      "clave": false
+    },
+    {
+      "texto": "como",
+      "inicio": 30.16,
+      "fin": 30.427,
+      "frase": 8,
+      "clave": false
+    },
+    {
+      "texto": "el",
+      "inicio": 30.48,
+      "fin": 30.64,
+      "frase": 8,
+      "clave": false
+    },
+    {
+      "texto": "agua,",
+      "inicio": 30.68,
+      "fin": 30.86,
+      "frase": 8,
+      "clave": false
+    },
+    {
+      "texto": "y",
+      "inicio": 30.88,
+      "fin": 30.96,
+      "frase": 8,
+      "clave": false
+    },
+    {
+      "texto": "ahí",
+      "inicio": 31.02,
+      "fin": 31.2,
+      "frase": 8,
+      "clave": false
+    },
+    {
+      "texto": "ese",
+      "inicio": 31.52,
+      "fin": 31.68,
+      "frase": 8,
+      "clave": false
+    },
+    {
+      "texto": "sodio",
+      "inicio": 31.72,
+      "fin": 32.187,
+      "frase": 8,
+      "clave": false
+    },
+    {
+      "texto": "no",
+      "inicio": 32.24,
+      "fin": 32.4,
+      "frase": 8,
+      "clave": false
+    },
+    {
+      "texto": "deja",
+      "inicio": 32.44,
+      "fin": 32.8,
+      "frase": 8,
+      "clave": false
+    },
+    {
+      "texto": "salir",
+      "inicio": 32.84,
+      "fin": 33.08,
+      "frase": 8,
+      "clave": false
+    },
+    {
+      "texto": "el",
+      "inicio": 33.12,
+      "fin": 33.253,
+      "frase": 8,
+      "clave": false
+    },
+    {
+      "texto": "naranja",
+      "inicio": 33.307,
+      "fin": 33.6,
+      "frase": 8,
+      "clave": true
+    },
+    {
+      "texto": "de",
+      "inicio": 33.76,
+      "fin": 33.84,
+      "frase": 8,
+      "clave": false
+    },
+    {
+      "texto": "su",
+      "inicio": 33.88,
+      "fin": 33.96,
+      "frase": 8,
+      "clave": false
+    },
+    {
+      "texto": "luz.",
+      "inicio": 34,
+      "fin": 34.16,
+      "frase": 8,
+      "clave": false
+    },
+    {
+      "texto": "Y",
+      "inicio": 34.2,
+      "fin": 34.24,
+      "frase": 9,
+      "clave": false
+    },
+    {
+      "texto": "una",
+      "inicio": 34.28,
+      "fin": 34.48,
+      "frase": 9,
+      "clave": false
+    },
+    {
+      "texto": "estrella",
+      "inicio": 34.56,
+      "fin": 35.387,
+      "frase": 9,
+      "clave": false
+    },
+    {
+      "texto": "sin",
+      "inicio": 35.413,
+      "fin": 35.536,
+      "frase": 9,
+      "clave": false
+    },
+    {
+      "texto": "naranja...",
+      "inicio": 35.584,
+      "fin": 36.04,
+      "frase": 9,
+      "clave": false
+    },
+    {
+      "texto": "se",
+      "inicio": 36.1,
+      "fin": 36.28,
+      "frase": 9,
+      "clave": false
+    },
+    {
+      "texto": "ve",
+      "inicio": 36.4,
+      "fin": 36.72,
+      "frase": 9,
+      "clave": false
+    },
+    {
+      "texto": "verde.",
+      "inicio": 36.88,
+      "fin": 37.12,
+      "frase": 9,
+      "clave": true
+    },
+    {
+      "texto": "Así",
+      "inicio": 37.2,
+      "fin": 37.36,
+      "frase": 10,
+      "clave": false
+    },
+    {
+      "texto": "que",
+      "inicio": 37.4,
+      "fin": 38.16,
+      "frase": 10,
+      "clave": false
+    },
+    {
+      "texto": "no",
+      "inicio": 38.2,
+      "fin": 38.32,
+      "frase": 10,
+      "clave": false
+    },
+    {
+      "texto": "es",
+      "inicio": 38.4,
+      "fin": 38.453,
+      "frase": 10,
+      "clave": false
+    },
+    {
+      "texto": "verde",
+      "inicio": 38.48,
+      "fin": 38.84,
+      "frase": 10,
+      "clave": false
+    },
+    {
+      "texto": "de",
+      "inicio": 38.88,
+      "fin": 39.013,
+      "frase": 10,
+      "clave": false
+    },
+    {
+      "texto": "nacimiento:",
+      "inicio": 39.067,
+      "fin": 39.733,
+      "frase": 10,
+      "clave": false
+    },
+    {
+      "texto": "es",
+      "inicio": 39.764,
+      "fin": 39.827,
+      "frase": 10,
+      "clave": false
+    },
+    {
+      "texto": "verde",
+      "inicio": 39.858,
+      "fin": 40.36,
+      "frase": 10,
+      "clave": false
+    },
+    {
+      "texto": "por",
+      "inicio": 40.4,
+      "fin": 40.587,
+      "frase": 10,
+      "clave": false
+    },
+    {
+      "texto": "lo",
+      "inicio": 40.64,
+      "fin": 40.72,
+      "frase": 10,
+      "clave": false
+    },
+    {
+      "texto": "que",
+      "inicio": 40.88,
+      "fin": 41.04,
+      "frase": 10,
+      "clave": false
+    },
+    {
+      "texto": "se",
+      "inicio": 41.08,
+      "fin": 41.12,
+      "frase": 10,
+      "clave": false
+    },
+    {
+      "texto": "comió,",
+      "inicio": 41.52,
+      "fin": 42.08,
+      "frase": 10,
+      "clave": true
+    },
+    {
+      "texto": "lo",
+      "inicio": 42.16,
+      "fin": 42.24,
+      "frase": 10,
+      "clave": false
+    },
+    {
+      "texto": "que",
+      "inicio": 42.28,
+      "fin": 42.32,
+      "frase": 10,
+      "clave": false
+    },
+    {
+      "texto": "quedaba",
+      "inicio": 42.4,
+      "fin": 42.8,
+      "frase": 10,
+      "clave": false
+    },
+    {
+      "texto": "de",
+      "inicio": 42.84,
+      "fin": 42.88,
+      "frase": 10,
+      "clave": false
+    },
+    {
+      "texto": "sus",
+      "inicio": 42.96,
+      "fin": 43.04,
+      "frase": 10,
+      "clave": false
+    },
+    {
+      "texto": "planetas.",
+      "inicio": 43.12,
+      "fin": 43.68,
+      "frase": 10,
+      "clave": false
+    },
+    {
+      "texto": "Envíaselo",
+      "inicio": 44.32,
+      "fin": 44.8,
+      "frase": 11,
+      "clave": false
+    },
+    {
+      "texto": "a",
+      "inicio": 44.84,
+      "fin": 44.88,
+      "frase": 11,
+      "clave": false
+    },
+    {
+      "texto": "ese",
+      "inicio": 44.96,
+      "fin": 45.04,
+      "frase": 11,
+      "clave": false
+    },
+    {
+      "texto": "amigo",
+      "inicio": 45.12,
+      "fin": 45.36,
+      "frase": 11,
+      "clave": false
+    },
+    {
+      "texto": "que",
+      "inicio": 45.44,
+      "fin": 45.52,
+      "frase": 11,
+      "clave": false
+    },
+    {
+      "texto": "cree",
+      "inicio": 45.56,
+      "fin": 45.76,
+      "frase": 11,
+      "clave": false
+    },
+    {
+      "texto": "que",
+      "inicio": 45.8,
+      "fin": 45.84,
+      "frase": 11,
+      "clave": false
+    },
+    {
+      "texto": "en",
+      "inicio": 45.92,
+      "fin": 46,
+      "frase": 11,
+      "clave": false
+    },
+    {
+      "texto": "el",
+      "inicio": 46.04,
+      "fin": 46.08,
+      "frase": 11,
+      "clave": false
+    },
+    {
+      "texto": "espacio",
+      "inicio": 46.2,
+      "fin": 46.56,
+      "frase": 11,
+      "clave": false
+    },
+    {
+      "texto": "ya",
+      "inicio": 46.72,
+      "fin": 46.8,
+      "frase": 11,
+      "clave": false
+    },
+    {
+      "texto": "está",
+      "inicio": 46.92,
+      "fin": 47.12,
+      "frase": 11,
+      "clave": false
+    },
+    {
+      "texto": "todo",
+      "inicio": 47.2,
+      "fin": 47.44,
+      "frase": 11,
+      "clave": false
+    },
+    {
+      "texto": "descubierto.",
+      "inicio": 47.56,
+      "fin": 48.4,
+      "frase": 11,
+      "clave": true
+    }
+  ]
+}

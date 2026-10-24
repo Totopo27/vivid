@@ -1,0 +1,29 @@
+{
+  "nombre": "tres",
+  "titulo": "Tres rarezas",
+  "para": "Cuando la idea es una sola cosa con varias rarezas de verdad, que se cuentan de menos a más y la mejor va al final (tres como mucho).",
+  "frases": [
+    { "papel": "la primera rareza, con el nombre de la cosa, y la promesa de que hay algo más raro", "ejemplo": "El pulpo tiene tres corazones, y es lo menos raro que tiene.", "hook": true },
+    { "papel": "la primera rareza, demostrada: qué hace", "ejemplo": "Dos le empujan la sangre por las branquias, y el tercero, por todo el cuerpo.", "hook": true },
+    { "papel": "la segunda rareza, enganchada a la primera", "ejemplo": "Y esa sangre es azul." },
+    { "papel": "su porqué, con algo de casa", "ejemplo": "Porque en vez de hierro, como la tuya, lleva cobre: el mismo metal de los cables de tu casa." },
+    { "papel": "la tercera, la mejor: dónde está lo más raro", "ejemplo": "Pero lo más raro está en sus brazos: ahí tiene dos de cada tres de sus neuronas." },
+    { "papel": "la tercera, en acción: lo que hace por eso", "ejemplo": "Cada brazo saborea lo que toca." },
+    { "papel": "la comparación con quien mira: cómo sería si le pasara a él", "ejemplo": "Es como si pudieras saber a qué sabe la comida solo con tocarla con los dedos." },
+    { "papel": "la prueba: el segundo «¡hala!»", "ejemplo": "Y cada brazo se mueve casi por su cuenta: uno cortado sigue un rato agarrando cosas, él solo." },
+    { "papel": "el remate: lo que ahora se sabe de la cosa entera, al revés de lo que se creía", "ejemplo": "Así que el pulpo no es una cabeza con ocho brazos: son ocho brazos que piensan, y una cabeza que los dirige." },
+    { "papel": "el cierre del creador, de preferencias.md, tal cual", "ejemplo": "Envíaselo a ese amigo que no sabe hacer dos cosas a la vez." }
+  ],
+  "plan": [
+    "La cosa, enorme, haciendo lo más llamativo desde el fotograma 0, con la primera rareza a la vista (el pulpo se lanza a la cámara y bajo su piel laten tres corazones encendidos). La cámara retrocede. Sigue.",
+    "La primera rareza, demostrada en el cuerpo de la cosa (la sangre sale de dos corazones hacia las branquias y del tercero hacia el resto). La cámara entra un poco. Sigue.",
+    "La segunda, con un cambio que se ve en el mismo sitio (la sangre se vuelve azul por todas sus venas). La cámara se mueve, no corta.",
+    "Corte a lo de casa, en su sitio (un enchufe se abre y brillan sus cables de cobre). Casi quieto; reposa antes de volver.",
+    "Corte de vuelta a la cosa: lo de dentro se enciende donde está lo más raro (se encienden las neuronas: casi todas, en los brazos). La cámara se aleja para ver los ocho.",
+    "La mejor, en acción (un brazo toca una concha y la concha se ilumina por donde la prueba). La cámara sigue al brazo.",
+    "Corte a la comparación con quien mira, en su sitio (unos dedos tocan una fresa y se enciende su sabor). Reposa.",
+    "Corte a la prueba, el segundo «¡hala!» (un brazo solo, en la arena, se estira y agarra una concha). Reposa antes del corte.",
+    "Corte a la cosa entera con lo que ahora se sabe (el pulpo, con los ocho brazos encendidos, cada uno con su luz, y la cabeza que los une). La cámara se aleja.",
+    "El cierre: la cosa una última vez mientras la cámara se aleja; el último fotograma enlaza con el primero."
+  ]
+}

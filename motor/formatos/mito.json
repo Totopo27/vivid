@@ -1,0 +1,31 @@
+{
+  "nombre": "mito",
+  "titulo": "Mito contra realidad",
+  "para": "Cuando la idea es algo que casi todo el mundo cree y es claramente falso, y lo que pasa de verdad se puede enseñar.",
+  "frases": [
+    { "papel": "la verdad, sin rodeos, con el nombre de la cosa: lo contrario de lo que todos creen", "ejemplo": "La Gran Muralla China no se ve desde el espacio.", "hook": true },
+    { "papel": "el mito, como lo dice la gente", "ejemplo": "Aunque digan que es la única obra humana que se ve desde allí.", "hook": true },
+    { "papel": "la pregunta que queda abierta: por qué parece verdad", "ejemplo": "¿Cómo no va a verse, si es larguísima?", "hook": true },
+    { "papel": "la primera razón, con algo de casa que la mide", "ejemplo": "Porque mide miles de kilómetros, sí, pero de ancho, lo que una calle." },
+    { "papel": "la comparación con algo de casa que lo hace sentir, con su frase entera", "ejemplo": "Verla desde allí arriba es como buscar un espagueti desde la otra punta de un campo de fútbol." },
+    { "papel": "la segunda razón, que remata la primera", "ejemplo": "Y encima es de la misma piedra y tierra que el suelo que la rodea: del mismo color." },
+    { "papel": "la prueba: alguien lo comprobó, y lo que vio", "ejemplo": "El primer astronauta chino la buscó desde su nave... y no la vio." },
+    { "papel": "de dónde salió el mito, y por qué se lo cree todo el mundo", "ejemplo": "Lo curioso es que el mito es más viejo que los cohetes: ya se contaba cuando nadie había subido nunca." },
+    { "papel": "lo que pasa de verdad: lo que sí es cierto, enseñado", "ejemplo": "Lo que sí se ve de nosotros desde allí, de noche, son las luces de nuestras ciudades." },
+    { "papel": "el remate: da la vuelta al mito con lo que ahora se sabe", "ejemplo": "Así que lo que nos delata desde el espacio no es la muralla más larga del mundo: son nuestras bombillas." },
+    { "papel": "el cierre del creador, de preferencias.md, tal cual", "ejemplo": "Envíaselo a ese amigo que todavía se lo cuenta a todo el mundo." }
+  ],
+  "plan": [
+    "La verdad puesta a prueba como una acción desde el fotograma 0 (la muralla enorme cruzando montañas y la cámara que sale disparada hacia arriba: la muralla se adelgaza hasta desaparecer). Sigue.",
+    "El mito como lo imagina la gente, exagerado, solo un momento (desde arriba, una raya brillante cruza la Tierra) y se apaga en su palabra. Mismo sitio: no se corta.",
+    "La cosa en lo más grande que tiene, para que la pregunta se entienda (la cámara baja y viaja a lo largo de la muralla, de montaña en montaña). Sigue.",
+    "Sin corte desde la pregunta: la primera razón, comprobada a su tamaño de verdad (la cámara baja a ras de la muralla y una calle de pueblo llega y se pone a su lado: igual de ancha). Sigue.",
+    "Corte a la comparación, en su sitio y con su frase entera (un campo de fútbol: en una punta, un espagueti; la cámara vuela a la otra y ya no se ve). Reposa antes de cortar.",
+    "Corte de vuelta: la segunda razón, pasando (la muralla se funde con las montañas del mismo color mientras la cámara se aleja). Sigue.",
+    "Corte a la prueba, en el sitio de quien la hizo (la ventana de una nave, la Tierra debajo; la cámara busca... y nada). Reposa en «vio».",
+    "Corte al origen del mito, con un objeto que lo cuenta y se mueve (un periódico viejo cae, se abre y enseña su dibujo de la muralla vista desde la Luna). Casi quieto, medio segundo.",
+    "Corte a lo que sí pasa, grande y con color (la Tierra de noche desde la nave: las ciudades se encienden una a una). La cámara gira despacio.",
+    "El remate en el mismo sitio, de vuelta al mito con lo que ahora se sabe (la cámara busca la muralla a oscuras y solo brillan las luces). Sigue.",
+    "El cierre: la cámara se aleja hasta ver la Tierra entera, una última vez; el último fotograma enlaza con el primero."
+  ]
+}

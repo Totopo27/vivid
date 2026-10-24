@@ -1,0 +1,20 @@
+{
+  "titulo": "La estrella verde",
+  "idioma": "es",
+  "look": "espacio",
+  "subtitulos": { "estilo": "caja", "posicion": "arriba" },
+  "voz": { "id": "851ejYcv2BoNPjrkw93G", "modelo": "eleven_v4", "estabilidad": 0.35, "similitud": 0.7, "estilo": 0, "velocidad": 1 },
+  "frases": [
+    { "texto": "Esta estrella es verde, y no debería existir.", "clave": "verde", "hook": true },
+    { "texto": "Las estrellas son rojas, amarillas, blancas o azules, pero nunca verdes.", "clave": "nunca", "hook": true },
+    { "texto": "¿Qué le ha pasado a esta?", "clave": "esta", "hook": true },
+    { "texto": "Que se murió.", "clave": "murió" },
+    { "texto": "Esto es el cadáver de una estrella como el Sol: una bola del tamaño de la Tierra que pesa como medio Sol.", "clave": "Tierra" },
+    { "texto": "Sus planetas no salieron enteros: sus trozos se quedaron girando a su alrededor, y fueron cayendo sobre ella.", "clave": "cayendo" },
+    { "texto": "Y esos trozos iban cargados de sodio: lo mismo que tienes en el salero.", "clave": "salero" },
+    { "texto": "Su aire es tan espeso como el agua, y ahí ese sodio no deja salir el naranja de su luz.", "clave": "naranja" },
+    { "texto": "Y una estrella sin naranja... se ve verde.", "clave": "verde" },
+    { "texto": "Así que no es verde de nacimiento: es verde por lo que se comió, lo que quedaba de sus planetas.", "clave": "comió" },
+    { "texto": "Envíaselo a ese amigo que cree que en el espacio ya está todo descubierto.", "clave": "descubierto" }
+  ]
+}

@@ -1,0 +1,734 @@
+{
+  "firma": "d0bf130cd4ed",
+  "proveedor": "elevenlabs",
+  "ajustes": {
+    "id": "851ejYcv2BoNPjrkw93G",
+    "modelo": "eleven_v4",
+    "estabilidad": 0.35,
+    "similitud": 0.7,
+    "estilo": 0,
+    "velocidad": 1
+  },
+  "palabras": [
+    {
+      "texto": "Esta",
+      "inicio": 0,
+      "fin": 0.15
+    },
+    {
+      "texto": "estrella",
+      "inicio": 0.15,
+      "fin": 0.24
+    },
+    {
+      "texto": "es",
+      "inicio": 0.32,
+      "fin": 0.373
+    },
+    {
+      "texto": "verde,",
+      "inicio": 0.4,
+      "fin": 0.8
+    },
+    {
+      "texto": "y",
+      "inicio": 1.12,
+      "fin": 1.2
+    },
+    {
+      "texto": "no",
+      "inicio": 1.28,
+      "fin": 1.64
+    },
+    {
+      "texto": "debería",
+      "inicio": 1.68,
+      "fin": 2.133
+    },
+    {
+      "texto": "existir.",
+      "inicio": 2.187,
+      "fin": 2.656
+    },
+    {
+      "texto": "Las",
+      "inicio": 2.72,
+      "fin": 3.16
+    },
+    {
+      "texto": "estrellas",
+      "inicio": 3.36,
+      "fin": 3.52
+    },
+    {
+      "texto": "son",
+      "inicio": 3.6,
+      "fin": 3.68
+    },
+    {
+      "texto": "rojas,",
+      "inicio": 3.733,
+      "fin": 4.12
+    },
+    {
+      "texto": "amarillas,",
+      "inicio": 4.16,
+      "fin": 4.96
+    },
+    {
+      "texto": "blancas",
+      "inicio": 5.2,
+      "fin": 5.76
+    },
+    {
+      "texto": "o",
+      "inicio": 5.8,
+      "fin": 5.84
+    },
+    {
+      "texto": "azules,",
+      "inicio": 5.92,
+      "fin": 6.4
+    },
+    {
+      "texto": "pero",
+      "inicio": 6.44,
+      "fin": 6.72
+    },
+    {
+      "texto": "nunca",
+      "inicio": 6.8,
+      "fin": 7.2
+    },
+    {
+      "texto": "verdes.",
+      "inicio": 7.28,
+      "fin": 7.8
+    },
+    {
+      "texto": "¿Qué",
+      "inicio": 7.84,
+      "fin": 8.08
+    },
+    {
+      "texto": "le",
+      "inicio": 8.16,
+      "fin": 8.64
+    },
+    {
+      "texto": "ha",
+      "inicio": 8.68,
+      "fin": 8.707
+    },
+    {
+      "texto": "pasado",
+      "inicio": 8.72,
+      "fin": 8.88
+    },
+    {
+      "texto": "a",
+      "inicio": 8.96,
+      "fin": 8.987
+    },
+    {
+      "texto": "esta?",
+      "inicio": 9.013,
+      "fin": 9.28
+    },
+    {
+      "texto": "Que",
+      "inicio": 9.32,
+      "fin": 9.48
+    },
+    {
+      "texto": "se",
+      "inicio": 9.54,
+      "fin": 9.68
+    },
+    {
+      "texto": "murió.",
+      "inicio": 10.16,
+      "fin": 10.4
+    },
+    {
+      "texto": "Esto",
+      "inicio": 10.48,
+      "fin": 10.64
+    },
+    {
+      "texto": "es",
+      "inicio": 10.8,
+      "fin": 11.36
+    },
+    {
+      "texto": "el",
+      "inicio": 11.44,
+      "fin": 11.6
+    },
+    {
+      "texto": "cadáver",
+      "inicio": 11.68,
+      "fin": 12.16
+    },
+    {
+      "texto": "de",
+      "inicio": 12.187,
+      "fin": 12.24
+    },
+    {
+      "texto": "una",
+      "inicio": 12.32,
+      "fin": 12.48
+    },
+    {
+      "texto": "estrella",
+      "inicio": 12.52,
+      "fin": 12.827
+    },
+    {
+      "texto": "como",
+      "inicio": 12.853,
+      "fin": 13.024
+    },
+    {
+      "texto": "el",
+      "inicio": 13.072,
+      "fin": 13.2
+    },
+    {
+      "texto": "Sol:",
+      "inicio": 13.22,
+      "fin": 13.36
+    },
+    {
+      "texto": "una",
+      "inicio": 13.4,
+      "fin": 13.573
+    },
+    {
+      "texto": "bola",
+      "inicio": 13.627,
+      "fin": 14.293
+    },
+    {
+      "texto": "del",
+      "inicio": 14.347,
+      "fin": 14.48
+    },
+    {
+      "texto": "tamaño",
+      "inicio": 14.533,
+      "fin": 14.8
+    },
+    {
+      "texto": "de",
+      "inicio": 14.88,
+      "fin": 15.072
+    },
+    {
+      "texto": "la",
+      "inicio": 15.104,
+      "fin": 15.168
+    },
+    {
+      "texto": "Tierra",
+      "inicio": 15.2,
+      "fin": 15.36
+    },
+    {
+      "texto": "que",
+      "inicio": 15.44,
+      "fin": 15.58
+    },
+    {
+      "texto": "pesa",
+      "inicio": 15.64,
+      "fin": 15.867
+    },
+    {
+      "texto": "como",
+      "inicio": 15.893,
+      "fin": 16.107
+    },
+    {
+      "texto": "medio",
+      "inicio": 16.16,
+      "fin": 16.5
+    },
+    {
+      "texto": "Sol.",
+      "inicio": 16.56,
+      "fin": 16.88
+    },
+    {
+      "texto": "Sus",
+      "inicio": 16.96,
+      "fin": 17.2
+    },
+    {
+      "texto": "planetas",
+      "inicio": 17.28,
+      "fin": 18.18
+    },
+    {
+      "texto": "no",
+      "inicio": 18.2,
+      "fin": 18.24
+    },
+    {
+      "texto": "salieron",
+      "inicio": 18.32,
+      "fin": 18.827
+    },
+    {
+      "texto": "enteros:",
+      "inicio": 18.853,
+      "fin": 19.312
+    },
+    {
+      "texto": "sus",
+      "inicio": 19.344,
+      "fin": 19.44
+    },
+    {
+      "texto": "trozos",
+      "inicio": 19.52,
+      "fin": 20.16
+    },
+    {
+      "texto": "se",
+      "inicio": 20.24,
+      "fin": 20.347
+    },
+    {
+      "texto": "quedaron",
+      "inicio": 20.4,
+      "fin": 20.86
+    },
+    {
+      "texto": "girando",
+      "inicio": 20.88,
+      "fin": 21.2
+    },
+    {
+      "texto": "a",
+      "inicio": 21.28,
+      "fin": 21.32
+    },
+    {
+      "texto": "su",
+      "inicio": 21.36,
+      "fin": 21.48
+    },
+    {
+      "texto": "alrededor,",
+      "inicio": 21.54,
+      "fin": 21.973
+    },
+    {
+      "texto": "y",
+      "inicio": 22.027,
+      "fin": 22.08
+    },
+    {
+      "texto": "fueron",
+      "inicio": 22.14,
+      "fin": 22.72
+    },
+    {
+      "texto": "cayendo",
+      "inicio": 22.8,
+      "fin": 23.16
+    },
+    {
+      "texto": "sobre",
+      "inicio": 23.2,
+      "fin": 23.54
+    },
+    {
+      "texto": "ella.",
+      "inicio": 23.6,
+      "fin": 23.86
+    },
+    {
+      "texto": "Y",
+      "inicio": 23.92,
+      "fin": 24.04
+    },
+    {
+      "texto": "esos",
+      "inicio": 24.07,
+      "fin": 24.24
+    },
+    {
+      "texto": "trozos",
+      "inicio": 24.8,
+      "fin": 25.04
+    },
+    {
+      "texto": "iban",
+      "inicio": 25.12,
+      "fin": 25.36
+    },
+    {
+      "texto": "cargados",
+      "inicio": 25.44,
+      "fin": 26
+    },
+    {
+      "texto": "de",
+      "inicio": 26.027,
+      "fin": 26.08
+    },
+    {
+      "texto": "sodio:",
+      "inicio": 26.14,
+      "fin": 26.48
+    },
+    {
+      "texto": "lo",
+      "inicio": 26.56,
+      "fin": 26.68
+    },
+    {
+      "texto": "mismo",
+      "inicio": 26.72,
+      "fin": 27.32
+    },
+    {
+      "texto": "que",
+      "inicio": 27.36,
+      "fin": 27.54
+    },
+    {
+      "texto": "tienes",
+      "inicio": 27.56,
+      "fin": 27.68
+    },
+    {
+      "texto": "en",
+      "inicio": 27.76,
+      "fin": 27.904
+    },
+    {
+      "texto": "el",
+      "inicio": 27.928,
+      "fin": 27.976
+    },
+    {
+      "texto": "salero.",
+      "inicio": 28,
+      "fin": 28.24
+    },
+    {
+      "texto": "Su",
+      "inicio": 28.293,
+      "fin": 28.4
+    },
+    {
+      "texto": "aire",
+      "inicio": 28.453,
+      "fin": 29.2
+    },
+    {
+      "texto": "es",
+      "inicio": 29.24,
+      "fin": 29.36
+    },
+    {
+      "texto": "tan",
+      "inicio": 29.42,
+      "fin": 29.6
+    },
+    {
+      "texto": "espeso",
+      "inicio": 29.68,
+      "fin": 30.08
+    },
+    {
+      "texto": "como",
+      "inicio": 30.16,
+      "fin": 30.427
+    },
+    {
+      "texto": "el",
+      "inicio": 30.48,
+      "fin": 30.64
+    },
+    {
+      "texto": "agua,",
+      "inicio": 30.68,
+      "fin": 30.86
+    },
+    {
+      "texto": "y",
+      "inicio": 30.88,
+      "fin": 30.96
+    },
+    {
+      "texto": "ahí",
+      "inicio": 31.02,
+      "fin": 31.2
+    },
+    {
+      "texto": "ese",
+      "inicio": 31.52,
+      "fin": 31.68
+    },
+    {
+      "texto": "sodio",
+      "inicio": 31.72,
+      "fin": 32.187
+    },
+    {
+      "texto": "no",
+      "inicio": 32.24,
+      "fin": 32.4
+    },
+    {
+      "texto": "deja",
+      "inicio": 32.44,
+      "fin": 32.8
+    },
+    {
+      "texto": "salir",
+      "inicio": 32.84,
+      "fin": 33.08
+    },
+    {
+      "texto": "el",
+      "inicio": 33.12,
+      "fin": 33.253
+    },
+    {
+      "texto": "naranja",
+      "inicio": 33.307,
+      "fin": 33.6
+    },
+    {
+      "texto": "de",
+      "inicio": 33.76,
+      "fin": 33.84
+    },
+    {
+      "texto": "su",
+      "inicio": 33.88,
+      "fin": 33.96
+    },
+    {
+      "texto": "luz.",
+      "inicio": 34,
+      "fin": 34.16
+    },
+    {
+      "texto": "Y",
+      "inicio": 34.2,
+      "fin": 34.24
+    },
+    {
+      "texto": "una",
+      "inicio": 34.28,
+      "fin": 34.48
+    },
+    {
+      "texto": "estrella",
+      "inicio": 34.56,
+      "fin": 35.387
+    },
+    {
+      "texto": "sin",
+      "inicio": 35.413,
+      "fin": 35.536
+    },
+    {
+      "texto": "naranja...",
+      "inicio": 35.584,
+      "fin": 36.04
+    },
+    {
+      "texto": "se",
+      "inicio": 36.1,
+      "fin": 36.28
+    },
+    {
+      "texto": "ve",
+      "inicio": 36.4,
+      "fin": 36.72
+    },
+    {
+      "texto": "verde.",
+      "inicio": 36.88,
+      "fin": 37.12
+    },
+    {
+      "texto": "Así",
+      "inicio": 37.2,
+      "fin": 37.36
+    },
+    {
+      "texto": "que",
+      "inicio": 37.4,
+      "fin": 38.16
+    },
+    {
+      "texto": "no",
+      "inicio": 38.2,
+      "fin": 38.32
+    },
+    {
+      "texto": "es",
+      "inicio": 38.4,
+      "fin": 38.453
+    },
+    {
+      "texto": "verde",
+      "inicio": 38.48,
+      "fin": 38.84
+    },
+    {
+      "texto": "de",
+      "inicio": 38.88,
+      "fin": 39.013
+    },
+    {
+      "texto": "nacimiento:",
+      "inicio": 39.067,
+      "fin": 39.733
+    },
+    {
+      "texto": "es",
+      "inicio": 39.764,
+      "fin": 39.827
+    },
+    {
+      "texto": "verde",
+      "inicio": 39.858,
+      "fin": 40.36
+    },
+    {
+      "texto": "por",
+      "inicio": 40.4,
+      "fin": 40.587
+    },
+    {
+      "texto": "lo",
+      "inicio": 40.64,
+      "fin": 40.72
+    },
+    {
+      "texto": "que",
+      "inicio": 40.88,
+      "fin": 41.04
+    },
+    {
+      "texto": "se",
+      "inicio": 41.08,
+      "fin": 41.12
+    },
+    {
+      "texto": "comió,",
+      "inicio": 41.52,
+      "fin": 42.08
+    },
+    {
+      "texto": "lo",
+      "inicio": 42.16,
+      "fin": 42.24
+    },
+    {
+      "texto": "que",
+      "inicio": 42.28,
+      "fin": 42.32
+    },
+    {
+      "texto": "quedaba",
+      "inicio": 42.4,
+      "fin": 42.8
+    },
+    {
+      "texto": "de",
+      "inicio": 42.84,
+      "fin": 42.88
+    },
+    {
+      "texto": "sus",
+      "inicio": 42.96,
+      "fin": 43.04
+    },
+    {
+      "texto": "planetas.",
+      "inicio": 43.12,
+      "fin": 43.68
+    },
+    {
+      "texto": "Envíaselo",
+      "inicio": 44.32,
+      "fin": 44.8
+    },
+    {
+      "texto": "a",
+      "inicio": 44.84,
+      "fin": 44.88
+    },
+    {
+      "texto": "ese",
+      "inicio": 44.96,
+      "fin": 45.04
+    },
+    {
+      "texto": "amigo",
+      "inicio": 45.12,
+      "fin": 45.36
+    },
+    {
+      "texto": "que",
+      "inicio": 45.44,
+      "fin": 45.52
+    },
+    {
+      "texto": "cree",
+      "inicio": 45.56,
+      "fin": 45.76
+    },
+    {
+      "texto": "que",
+      "inicio": 45.8,
+      "fin": 45.84
+    },
+    {
+      "texto": "en",
+      "inicio": 45.92,
+      "fin": 46
+    },
+    {
+      "texto": "el",
+      "inicio": 46.04,
+      "fin": 46.08
+    },
+    {
+      "texto": "espacio",
+      "inicio": 46.2,
+      "fin": 46.56
+    },
+    {
+      "texto": "ya",
+      "inicio": 46.72,
+      "fin": 46.8
+    },
+    {
+      "texto": "está",
+      "inicio": 46.92,
+      "fin": 47.12
+    },
+    {
+      "texto": "todo",
+      "inicio": 47.2,
+      "fin": 47.44
+    },
+    {
+      "texto": "descubierto.",
+      "inicio": 47.56,
+      "fin": 48.4
+    }
+  ]
+}

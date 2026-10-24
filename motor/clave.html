@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Tu clave de ElevenLabs</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%2355cfa8'/%3E%3Ccircle cx='9' cy='14' r='3.2' fill='none' stroke='%2306251c' stroke-width='2'/%3E%3Cpath d='m11.4 11.6 6-6m-2 2 1.6 1.6m-3.4.2 1.6 1.6' stroke='%2306251c' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<!-- La página de motor/clave.mjs: la sirve este ordenador (127.0.0.1) y no carga nada de internet. __NONCE__, __TOKEN__,
+     __ESTADO__ ("pedir" o "guardada") y __ERROR__ los pone clave.mjs al servirla. -->
+<style nonce="__NONCE__">
+  :root {
+    color-scheme: dark;
+    --fondo: #090b10; --superficie: #11151d; --superficie-2: #171c26; --linea: #273041;
+    --texto: #f4f6fa; --suave: #a8b0bf; --tenue: #7a8496;
+    --acento: #8be0c4; --boton: #55cfa8; --boton-tinta: #06251c; --acento-velo: rgba(139, 224, 196, .09); --acento-borde: rgba(139, 224, 196, .3);
+    --aviso: #f4bd76; --aviso-velo: rgba(244, 189, 118, .08); --aviso-borde: rgba(244, 189, 118, .3);
+    --error: #ff9b9b; --error-velo: rgba(255, 120, 120, .09);
+    --sombra: 0 24px 70px rgba(0, 0, 0, .35);
+    --sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --mono: ui-monospace, "SFMono-Regular", "Cascadia Code", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      color-scheme: light;
+      --fondo: #f4f6f9; --superficie: #ffffff; --superficie-2: #f1f4f8; --linea: #dce2ea;
+      --texto: #111827; --suave: #4b5563; --tenue: #6b7280;
+      --acento: #0e7d5d; --boton: #0e7d5d; --boton-tinta: #ffffff; --acento-velo: rgba(14, 125, 93, .07); --acento-borde: rgba(14, 125, 93, .28);
+      --aviso: #8a5300; --aviso-velo: rgba(234, 160, 40, .1); --aviso-borde: rgba(200, 130, 20, .32);
+      --error: #b4232a; --error-velo: rgba(192, 38, 45, .07);
+      --sombra: 0 18px 50px rgba(17, 24, 39, .08);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; color: var(--texto); font: 16px/1.6 var(--sans); -webkit-font-smoothing: antialiased;
+    background:
+      radial-gradient(circle at 10% -5%, var(--acento-velo), transparent 30rem),
+      radial-gradient(circle at 95% 10%, rgba(102, 126, 234, .08), transparent 26rem),
+      var(--fondo);
+  }
+  a { color: var(--acento); font-weight: 650; text-underline-offset: 3px; }
+  code, kbd { font-family: var(--mono); font-size: .88em; }
+  code { padding: .1em .38em; border-radius: 6px; background: var(--superficie-2); border: 1px solid var(--linea); }
+  strong { color: var(--texto); }
+  svg { width: 1.15em; height: 1.15em; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+  .envoltura { width: min(100% - 32px, 1060px); margin-inline: auto; }
+  .simbolos { position: absolute; }
+
+  /* --- la cabecera */
+  .cabeza { padding: 56px 0 30px; text-align: center; }
+  .icono-grande { display: inline-grid; place-items: center; width: 56px; height: 56px; border-radius: 16px; background: var(--boton); color: var(--boton-tinta); box-shadow: 0 10px 30px rgba(85, 207, 168, .25); }
+  .icono-grande svg { width: 28px; height: 28px; }
+  .antetitulo { margin: 18px 0 6px; color: var(--acento); font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+  h1 { margin: 0 auto; max-width: 700px; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.08; letter-spacing: -.035em; }
+  .entrada { max-width: 600px; margin: 14px auto 0; color: var(--suave); font-size: 1.08rem; }
+  .sellos { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 24px 0 0; padding: 0; list-style: none; }
+  .sellos li { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border: 1px solid var(--acento-borde); border-radius: 999px; background: var(--acento-velo); color: var(--texto); font-size: .9rem; font-weight: 650; }
+  .sellos svg { color: var(--acento); }
+
+  /* --- las dos columnas: los pasos y el recuadro de la clave */
+  .rejilla { display: grid; gap: 22px; padding-bottom: 40px; grid-template-columns: minmax(0, 1fr); grid-template-areas: "clave" "pasos"; }
+  @media (min-width: 900px) {
+    .rejilla { grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); grid-template-areas: "pasos clave"; align-items: start; }
+    .tarjeta-clave { position: sticky; top: 24px; }
+  }
+  .tarjeta { border: 1px solid var(--linea); border-radius: 20px; background: var(--superficie); box-shadow: var(--sombra); }
+  .tarjeta-clave { grid-area: clave; padding: 26px; }
+  .pasos { grid-area: pasos; padding: 26px 26px 10px; }
+  h2 { margin: 0; font-size: 1.3rem; letter-spacing: -.02em; }
+  .sub { margin: 4px 0 0; color: var(--suave); font-size: .95rem; }
+
+  /* --- el formulario */
+  form { margin-top: 18px; }
+  label { display: block; margin-bottom: 8px; font-weight: 700; font-size: .95rem; }
+  .campo { display: flex; align-items: center; gap: 6px; padding: 6px 6px 6px 14px; border: 1.5px solid var(--linea); border-radius: 14px; background: var(--superficie-2); transition: border-color .15s, box-shadow .15s; }
+  .campo:focus-within { border-color: var(--acento); box-shadow: 0 0 0 4px var(--acento-velo); }
+  .campo.mal { border-color: var(--error); }
+  .campo input { flex: 1; min-width: 0; padding: 9px 0; border: 0; outline: 0; background: transparent; color: var(--texto); font: 15px/1.4 var(--mono); }
+  .campo input::placeholder { color: var(--tenue); }
+  .ver { display: inline-flex; align-items: center; gap: 6px; padding: 8px 10px; border: 0; border-radius: 10px; background: transparent; color: var(--suave); font: 600 .85rem var(--sans); cursor: pointer; }
+  .ver:hover, .ver:focus-visible { background: var(--fondo); color: var(--texto); outline: none; }
+  .ver .ojo-cerrado, .ver[aria-pressed="true"] .ojo-abierto { display: none; }
+  .ver[aria-pressed="true"] .ojo-cerrado { display: inline; }
+  .pista { min-height: 1.5em; margin: 8px 2px 0; color: var(--tenue); font-size: .88rem; }
+  .pista.mal { color: var(--error); }
+  .pista.bien { color: var(--acento); }
+  .guardar { display: flex; align-items: center; justify-content: center; gap: 9px; width: 100%; margin-top: 14px; padding: 14px 20px; border: 0; border-radius: 14px; background: var(--boton); color: var(--boton-tinta); font: 750 1rem var(--sans); cursor: pointer; transition: transform .1s, filter .15s; }
+  .guardar:hover { filter: brightness(1.06); }
+  .guardar:active { transform: translateY(1px); }
+  .guardar:focus-visible { outline: 3px solid var(--acento-borde); outline-offset: 3px; }
+  .guardar[disabled] { opacity: .7; cursor: progress; }
+  .error { display: flex; gap: 10px; margin-top: 16px; padding: 12px 14px; border-radius: 12px; background: var(--error-velo); color: var(--error); font-size: .92rem; }
+  .error:empty { display: none; }
+
+  /* --- lo que pasa con la clave */
+  .segura { margin-top: 22px; padding: 18px; border: 1px solid var(--acento-borde); border-radius: 16px; background: var(--acento-velo); }
+  .segura h3 { display: flex; align-items: center; gap: 9px; margin: 0 0 10px; font-size: 1rem; }
+  .segura h3 svg { color: var(--acento); width: 1.3em; height: 1.3em; }
+  .segura ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 9px; }
+  .segura li { display: grid; grid-template-columns: 22px 1fr; gap: 8px; color: var(--suave); font-size: .9rem; line-height: 1.5; }
+  .segura li svg { margin-top: .15em; color: var(--acento); }
+
+  /* --- los pasos */
+  .pasos ol { margin: 20px 0 0; padding: 0; list-style: none; counter-reset: paso; }
+  .paso { position: relative; display: grid; grid-template-columns: 40px 1fr; gap: 16px; padding-bottom: 26px; counter-increment: paso; }
+  .paso::before { content: counter(paso); display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--texto); color: var(--fondo); font-weight: 800; }
+  .paso:not(:last-child)::after { content: ""; position: absolute; left: 19.5px; top: 46px; bottom: 6px; width: 1px; background: var(--linea); }
+  .paso h3 { margin: 7px 0 4px; font-size: 1.05rem; letter-spacing: -.01em; }
+  .paso p { margin: 0 0 10px; color: var(--suave); font-size: .95rem; }
+  .boton-fuera { display: inline-flex; align-items: center; gap: 8px; margin-top: 2px; padding: 9px 14px; border: 1px solid var(--acento-borde); border-radius: 11px; background: var(--acento-velo); color: var(--acento); text-decoration: none; font-size: .92rem; }
+  .boton-fuera:hover { border-color: var(--acento); }
+  .nota { display: flex; gap: 10px; margin-top: 12px; padding: 12px 14px; border: 1px solid var(--aviso-borde); border-radius: 12px; background: var(--aviso-velo); color: var(--suave); font-size: .88rem; }
+  .nota svg { margin-top: .15em; color: var(--aviso); }
+  .nota.suave { border-color: var(--linea); background: var(--superficie-2); }
+  .nota.suave svg { color: var(--tenue); }
+
+  /* --- los dibujos de ElevenLabs (esquemáticos: los nombres, en inglés, como en su web) */
+  .maqueta { margin-top: 6px; padding: 14px; border: 1px solid #e3e7ee; border-radius: 14px; background: #fbfcfd; color: #111827; font-size: .86rem; box-shadow: 0 1px 0 rgba(0, 0, 0, .02); }
+  .maqueta .titulo { margin: 0 0 10px; color: #111827; font-weight: 750; font-size: .92rem; }
+  .barra { display: block; height: 8px; border-radius: 4px; background: #e6e9ef; }
+  .menu { display: grid; grid-template-columns: 150px 1fr; gap: 14px; }
+  .menu .lado { display: grid; gap: 9px; align-content: start; padding: 6px; border-right: 1px solid #edf0f4; }
+  .menu .lado .barra:nth-child(2) { width: 80%; } .menu .lado .barra:nth-child(3) { width: 65%; } .menu .lado .barra:nth-child(4) { width: 72%; }
+  .elegido { display: inline-flex; align-items: center; gap: 7px; padding: 6px 9px; border-radius: 9px; background: #111827; color: #fff; font-weight: 700; box-shadow: 0 0 0 3px rgba(22, 163, 122, .45); }
+  .pestanas { display: flex; align-items: center; gap: 10px; padding-bottom: 10px; border-bottom: 1px solid #edf0f4; }
+  .pestanas .barra { width: 60px; }
+  .pestana-buena { padding-bottom: 4px; border-bottom: 2.5px solid #111827; font-weight: 750; box-shadow: 0 6px 0 -3px rgba(22, 163, 122, .55); }
+  .lista { display: grid; gap: 8px; margin-top: 12px; }
+  .lista .barra:nth-child(2) { width: 70%; }
+  .boton-maqueta { display: inline-flex; align-items: center; gap: 6px; margin-top: 12px; padding: 7px 12px; border-radius: 9px; background: #111827; color: #fff; font-weight: 700; box-shadow: 0 0 0 3px rgba(22, 163, 122, .45); }
+  .fila { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 9px 10px; border-radius: 10px; }
+  .fila + .fila { border-top: 1px solid #f0f2f6; }
+  .fila.si { background: rgba(22, 163, 122, .09); }
+  .fila .para { display: block; color: #6b7280; font-size: .78rem; font-weight: 500; }
+  .fila b { font-weight: 700; }
+  .valor { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 8px; background: #111827; color: #fff; font-weight: 700; font-size: .8rem; }
+  .valor svg { color: #5ee0b4; }
+  .valor.no { background: #eef1f5; color: #6b7280; }
+  .interruptor { flex: 0 0 auto; position: relative; width: 38px; height: 22px; border-radius: 11px; background: #111827; }
+  .interruptor::after { content: ""; position: absolute; top: 3px; right: 3px; width: 16px; height: 16px; border-radius: 50%; background: #fff; }
+  .clave-maqueta { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 9px 10px; border: 1px solid #e3e7ee; border-radius: 9px; background: #fff; font-family: var(--mono); font-size: .82rem; }
+  .clave-maqueta span:first-child { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+  /* --- guardada */
+  .hecho { display: none; padding: 34px 26px; text-align: center; }
+  .hecho .marca-ok { display: inline-grid; place-items: center; width: 64px; height: 64px; border-radius: 50%; background: var(--acento-velo); border: 1px solid var(--acento-borde); color: var(--acento); }
+  .hecho .marca-ok svg { width: 32px; height: 32px; stroke-width: 2.4; }
+  .hecho h2 { margin-top: 16px; font-size: 1.6rem; }
+  .hecho p { max-width: 460px; margin: 10px auto 0; color: var(--suave); }
+  body[data-estado="guardada"] .hecho { display: block; }
+  body[data-estado="guardada"] .pedir, body[data-estado="guardada"] .pasos { display: none; }
+  body[data-estado="guardada"] .rejilla { grid-template-columns: minmax(0, 620px); grid-template-areas: "clave"; justify-content: center; }
+  body[data-estado="guardada"] .tarjeta-clave { position: static; padding: 0; }
+
+  footer { padding: 6px 0 40px; color: var(--tenue); font-size: .84rem; text-align: center; }
+
+  @media (max-width: 520px) {
+    .cabeza { padding-top: 34px; }
+    .tarjeta-clave, .pasos { padding: 20px; }
+    .menu { grid-template-columns: 1fr; }
+    .menu .lado { border-right: 0; border-bottom: 1px solid #edf0f4; padding-bottom: 10px; }
+    .paso { grid-template-columns: 32px 1fr; gap: 12px; }
+    .paso::before { width: 32px; height: 32px; font-size: .9rem; }
+    .paso:not(:last-child)::after { left: 15.5px; top: 38px; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body data-estado="__ESTADO__">
+<svg class="simbolos" width="0" height="0" aria-hidden="true" focusable="false">
+  <symbol id="i-llave" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="m11 12 8-8M16 7l2 2M14 9l2 2"/></symbol>
+  <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.6 2.8 8 7 10 4.2-2 7-5.4 7-10V6Z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-nube-no" viewBox="0 0 24 24"><path d="M7 18h10a4 4 0 0 0 .8-7.9A6 6 0 0 0 6.3 9.2 4.5 4.5 0 0 0 7 18Z"/><path d="m3 3 18 18"/></symbol>
+  <symbol id="i-ordenador" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2.5 19h19"/></symbol>
+  <symbol id="i-chat-no" viewBox="0 0 24 24"><path d="M20 15a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2Z"/><path d="m3 3 18 18"/></symbol>
+  <symbol id="i-candado" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="i-voz" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v3"/></symbol>
+  <symbol id="i-papelera" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></symbol>
+  <symbol id="i-fuera" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9"/><path d="M19 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h4"/></symbol>
+  <symbol id="i-ojo" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-ojo-no" viewBox="0 0 24 24"><path d="M10.6 5.1A10 10 0 0 1 12 5c6.4 0 10 7 10 7a17 17 0 0 1-3.2 4.1M6.6 6.6A17 17 0 0 0 2 12s3.6 7 10 7a9.7 9.7 0 0 0 5.4-1.6"/><path d="m3 3 18 18M9.9 9.9a3 3 0 0 0 4.2 4.2"/></symbol>
+  <symbol id="i-ok" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-alerta" viewBox="0 0 24 24"><path d="M10.3 4.2 2.6 18a2 2 0 0 0 1.8 3h15.2a2 2 0 0 0 1.8-3L13.7 4.2a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+  <symbol id="i-copiar" viewBox="0 0 24 24"><rect x="8" y="8" width="11" height="11" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></symbol>
+</svg>
+
+<header class="cabeza envoltura">
+  <span class="icono-grande" aria-hidden="true"><svg><use href="#i-llave"/></svg></span>
+  <p class="antetitulo">Configuración de la voz</p>
+  <h1>Conecta tu cuenta de ElevenLabs</h1>
+  <p class="entrada">Tus vídeos usan ElevenLabs para la voz. Pega aquí tu clave una sola vez y no vuelvas a pensar en ella.</p>
+  <ul class="sellos" aria-label="Lo que pasa con tu clave">
+    <li><svg aria-hidden="true"><use href="#i-nube-no"/></svg>No se envía a ningún servidor</li>
+    <li><svg aria-hidden="true"><use href="#i-ordenador"/></svg>Solo se guarda en tu ordenador</li>
+    <li><svg aria-hidden="true"><use href="#i-chat-no"/></svg>Nunca pasa por el chat</li>
+  </ul>
+</header>
+
+<main class="rejilla envoltura">
+  <section class="tarjeta tarjeta-clave" aria-labelledby="t-clave">
+    <div class="pedir">
+      <h2 id="t-clave">Pega tu clave</h2>
+      <p class="sub">¿Aún no la tienes? Sigue los pasos: tardas dos minutos.</p>
+      <form method="post" action="/" id="formulario" novalidate>
+        <input type="hidden" name="t" value="__TOKEN__">
+        <label for="k">Tu clave de ElevenLabs</label>
+        <div class="campo" id="campo">
+          <input id="k" name="k" type="password" placeholder="sk_…" autocomplete="off" autocapitalize="off" spellcheck="false" data-1p-ignore data-lpignore="true" aria-describedby="pista" required autofocus>
+          <button class="ver" type="button" id="ver" aria-pressed="false" aria-controls="k" hidden>
+            <svg class="ojo-abierto" aria-hidden="true"><use href="#i-ojo"/></svg><svg class="ojo-cerrado" aria-hidden="true"><use href="#i-ojo-no"/></svg><span>Ver</span>
+          </button>
+        </div>
+        <p class="pista" id="pista">Empieza por <code>sk_</code> y es larga.</p>
+        <button class="guardar" type="submit" id="guardar"><svg aria-hidden="true"><use href="#i-candado"/></svg><span>Guardar en este ordenador</span></button>
+        <p class="error" role="alert">__ERROR__</p>
+      </form>
+
+      <div class="segura">
+        <h3><svg aria-hidden="true"><use href="#i-escudo"/></svg>Tu clave está a salvo</h3>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#i-ordenador"/></svg><span><strong>Esta página no está en internet.</strong> La abre tu propio ordenador (<code>127.0.0.1</code>) y no carga nada de fuera.</span></li>
+          <li><svg aria-hidden="true"><use href="#i-nube-no"/></svg><span><strong>No se envía a nadie.</strong> Al guardar, la clave pasa de esta pestaña a tu ordenador y ahí se queda: no va a ningún servidor ni al chat.</span></li>
+          <li><svg aria-hidden="true"><use href="#i-candado"/></svg><span><strong>Solo se guarda aquí,</strong> en el archivo <code>.env.local</code> de la carpeta, que solo puede leer tu usuario.</span></li>
+          <li><svg aria-hidden="true"><use href="#i-voz"/></svg><span><strong>Solo se usa para pedir la voz</strong> directamente a ElevenLabs cuando haces un vídeo.</span></li>
+          <li><svg aria-hidden="true"><use href="#i-papelera"/></svg><span>¿Quieres quitarla? Bórrala en ElevenLabs o borra ese archivo.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hecho" role="status">
+      <span class="marca-ok" aria-hidden="true"><svg><use href="#i-ok"/></svg></span>
+      <h2>Clave guardada</h2>
+      <p>Está guardada solo en este ordenador. Ya puedes cerrar esta pestaña y volver al chat.</p>
+    </div>
+  </section>
+
+  <section class="tarjeta pasos" aria-labelledby="t-pasos">
+    <h2 id="t-pasos">Cómo conseguir tu clave</h2>
+    <p class="sub">En la web de ElevenLabs. Los botones están en inglés, como aquí.</p>
+    <ol>
+      <li class="paso">
+        <div>
+          <h3>Entra en ElevenLabs</h3>
+          <p>Inicia sesión, o crea tu cuenta gratis si aún no tienes.</p>
+          <a class="boton-fuera" href="https://elevenlabs.io/app/settings/api-keys" target="_blank" rel="noopener noreferrer">Abrir ElevenLabs<svg aria-hidden="true"><use href="#i-fuera"/></svg></a>
+        </div>
+      </li>
+      <li class="paso">
+        <div>
+          <h3>Ve a <em>Developers</em> → <em>API Keys</em></h3>
+          <p>Abajo a la izquierda, en el menú, pulsa <strong>Developers</strong>. Arriba, abre la pestaña <strong>API Keys</strong>.</p>
+          <div class="maqueta menu" aria-hidden="true">
+            <div class="lado"><span class="barra"></span><span class="barra"></span><span class="barra"></span><span class="barra"></span><span class="elegido">Developers</span></div>
+            <div><div class="pestanas"><span class="barra"></span><span class="pestana-buena">API Keys</span><span class="barra"></span></div><div class="lista"><span class="barra"></span><span class="barra"></span></div></div>
+          </div>
+        </div>
+      </li>
+      <li class="paso">
+        <div>
+          <h3>Pulsa <em>Create Key</em></h3>
+          <p>Ponle un nombre que reconozcas, por ejemplo <strong>Vídeos</strong>.</p>
+        </div>
+      </li>
+      <li class="paso">
+        <div>
+          <h3>Marca solo estos permisos</h3>
+          <p>Deja <strong>Restrict Key</strong> encendido y da acceso solo a esto. Todo lo demás, en <strong>No Access</strong>.</p>
+          <div class="maqueta" aria-label="Los permisos que hay que marcar">
+            <p class="titulo">Create API Key</p>
+            <div class="fila"><b>Restrict Key</b><span class="interruptor" role="img" aria-label="encendido"></span></div>
+            <div class="fila si"><span><b>Text to Speech</b><span class="para">para hacer la voz</span></span><span class="valor"><svg aria-hidden="true"><use href="#i-ok"/></svg>Access</span></div>
+            <div class="fila si"><span><b>Voices</b><span class="para">para escuchar y elegir tu voz, y añadir las de la biblioteca</span></span><span class="valor"><svg aria-hidden="true"><use href="#i-ok"/></svg>Write</span></div>
+            <div class="fila si"><span><b>User</b><span class="para">para saber cuántos caracteres te quedan</span></span><span class="valor"><svg aria-hidden="true"><use href="#i-ok"/></svg>Read</span></div>
+            <div class="fila"><span><b>Todo lo demás</b></span><span class="valor no">No Access</span></div>
+          </div>
+          <div class="nota suave"><svg aria-hidden="true"><use href="#i-info"/></svg><span>Si quieres, pon también un límite de créditos: la clave nunca gastará más. ¿Prefieres no complicarte? Apaga <strong>Restrict Key</strong>: también funciona, pero la clave podrá hacer cualquier cosa en tu cuenta.</span></div>
+        </div>
+      </li>
+      <li class="paso">
+        <div>
+          <h3>Crea la clave y cópiala ya</h3>
+          <p>Pulsa <strong>Create</strong> y copia la clave que aparece. Empieza por <code>sk_</code>. Pégala en el recuadro de esta página.</p>
+          <div class="maqueta" aria-hidden="true"><div class="clave-maqueta"><span>sk_3f9a••••••••••••••••••••••••••••••c21e</span><span class="boton-maqueta"><svg><use href="#i-copiar"/></svg>Copy</span></div></div>
+          <div class="nota"><svg aria-hidden="true"><use href="#i-alerta"/></svg><span><strong>ElevenLabs solo la enseña esta vez.</strong> Si no la copiaste, crea otra. El código corto de la lista de claves (el ID) no sirve.</span></div>
+        </div>
+      </li>
+    </ol>
+  </section>
+</main>
+
+<footer class="envoltura">Esta página funciona solo en tu ordenador y se cierra sola al guardar la clave (o a los 10 minutos).</footer>
+
+<script nonce="__NONCE__">
+  // Ver u ocultar la clave, limpiar lo que se pega de más y decir si tiene buena pinta antes de enviarla al ordenador.
+  const k = document.getElementById("k"), ver = document.getElementById("ver"), campo = document.getElementById("campo");
+  const pista = document.getElementById("pista"), formulario = document.getElementById("formulario"), guardar = document.getElementById("guardar");
+  const AYUDA = pista.innerHTML;
+  const limpia = (x) => x.replace(/["'`\s]/g, "").replace(/^(ELEVENLABS_API_KEY=|xi-api-key:)/i, "");
+  const problema = (x) => !x ? "Pega la clave en el recuadro."
+    : !x.startsWith("sk_") ? "Esa no es la clave: la buena empieza por sk_ (el ID corto de la lista no sirve)."
+    : !/^sk_[A-Za-z0-9]{20,}$/.test(x) ? "Le falta un trozo o le sobra algo: cópiala entera, tal cual." : "";
+  const di = (texto, clase) => { pista.className = "pista" + (clase ? " " + clase : ""); if (texto) pista.textContent = texto; else pista.innerHTML = AYUDA; campo.classList.toggle("mal", clase === "mal"); };
+  ver.hidden = false;
+  ver.addEventListener("click", () => {
+    const mostrar = k.type === "password";
+    k.type = mostrar ? "text" : "password";
+    ver.setAttribute("aria-pressed", String(mostrar));
+    ver.querySelector("span").textContent = mostrar ? "Ocultar" : "Ver";
+    k.focus();
+  });
+  k.addEventListener("input", () => {
+    const x = limpia(k.value);
+    if (!x) return di("", "");
+    const p = problema(x);
+    di(p || "Tiene buena pinta. Pulsa Guardar.", p ? "mal" : "bien");
+  });
+  formulario.addEventListener("submit", (e) => {
+    const x = limpia(k.value), p = problema(x);
+    if (p) { e.preventDefault(); di(p, "mal"); k.focus(); return; }
+    k.value = x;
+    guardar.disabled = true;
+    guardar.querySelector("span").textContent = "Guardando…";
+  });
+</script>
+</body>
+</html>

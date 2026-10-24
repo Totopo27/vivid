@@ -1,0 +1,31 @@
+{
+  "nombre": "historia",
+  "titulo": "La historia con giro",
+  "para": "Cuando la idea es un caso real (un descubrimiento, un invento, algo que pasó) en el que lo que parecía una cosa resultó ser otra.",
+  "frases": [
+    { "papel": "lo que salió, con su nombre, y lo raro de cómo salió: nunca la fecha, el lugar ni quién", "ejemplo": "La penicilina se descubrió porque alguien se fue de vacaciones sin recoger.", "hook": true },
+    { "papel": "lo que parecía: el error, la basura, el fracaso", "ejemplo": "Al volver, uno de sus platos de bacterias estaba lleno de moho, para tirar.", "hook": true },
+    { "papel": "el detalle que no encaja, sin explicarlo: deja la pregunta abierta", "ejemplo": "Pero alrededor pasaba algo raro.", "hook": true },
+    { "papel": "lo que de verdad pasaba, enseñado", "ejemplo": "Las bacterias que lo rodeaban habían desaparecido, como si algo las hubiera borrado." },
+    { "papel": "lo que era, con algo de casa", "ejemplo": "Ese moho era de la familia del moho verde que le sale al pan viejo." },
+    { "papel": "el mecanismo: por qué funciona, causa y efecto", "ejemplo": "Y echaba un jugo que no deja a las bacterias construir su pared, así que, al crecer, revientan." },
+    { "papel": "el obstáculo: por qué no bastó con descubrirlo, con algo de casa que lo mide", "ejemplo": "Pero sacarlo costaba tanto que, de litros de caldo de moho, salía lo que cabe en una uña." },
+    { "papel": "la prueba que lo cambia todo, como una acción", "ejemplo": "Hasta que otros científicos se lo dieron a ratones enfermos: los que lo tomaron vivieron, y los demás no." },
+    { "papel": "el segundo giro: otra vez, lo que parecía basura", "ejemplo": "Y para fabricarlo a lo grande, el mejor moho de todos apareció en un melón podrido." },
+    { "papel": "el remate: da la vuelta al hook (el descuido era el regalo)", "ejemplo": "Así que la penicilina, que ha salvado millones de vidas, salió de dos cosas que habrías tirado a la basura." },
+    { "papel": "el cierre del creador, de preferencias.md, tal cual", "ejemplo": "Envíaselo a ese amigo que nunca recoge nada." }
+  ],
+  "plan": [
+    "El momento del giro, enorme y moviéndose desde el fotograma 0 (el plato llena la pantalla: el moho verde crece de golpe y a su alrededor se borran las bacterias). La cámara se aleja. Sigue.",
+    "Lo que parecía, en el sitio de la historia (la cámara sigue alejándose: el plato está entre otros en una mesa desordenada y una mano lo coge para tirarlo). Mismo sitio: sigue.",
+    "La mano se para; la cámara se lanza a lo raro y se queda pegada (el borde del moho). Sigue, sin corte.",
+    "Lo que de verdad pasaba, como una acción y en su palabra (alrededor del moho se abre un anillo limpio y las bacterias se apagan). Reposa antes del corte.",
+    "Corte a la comparación de casa, en su sitio (una rebanada de pan viejo con su moho verde, que crece). Casi quieta; reposa.",
+    "Corte a dentro, a lo muy pequeño, paso a paso (una bacteria levanta su pared, el jugo la deja a medias y, al crecer, revienta). La cámara se acerca.",
+    "Corte al obstáculo, que se ve y se mide (un barreño enorme de caldo se cuela y queda una gota en la punta de una uña). La cámara baja con lo que cae.",
+    "Corte a la prueba, el segundo «¡hala!» (dos grupos de ratones: unos se levantan y corren, los otros se apagan). Reposa en «no».",
+    "Corte al segundo giro, con su objeto (un melón podrido en una caja; la cámara entra en su moho y de él salen frascos y frascos). Sigue.",
+    "El remate: lo que se iba a tirar, junto, con lo que salió de ello (el plato y el melón en un cubo de basura, y de ellos sube una luz). La cámara se aleja y reposa.",
+    "El cierre: la cosa del vídeo una última vez mientras la cámara se aleja; el último fotograma enlaza con el primero (el plato en la mesa desordenada)."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "nombre": "pregunta",
+  "titulo": "La pregunta",
+  "para": "Cuando la idea es algo que la gente se pregunta («¿por qué...?», «¿qué pasa cuando...?») y la respuesta es una causa que se puede enseñar paso a paso.",
+  "frases": [
+    { "papel": "la pregunta que contesta el vídeo, como la diría quien mira, con el nombre de la cosa", "ejemplo": "¿Por qué cuando cortas una cebolla acabas llorando?", "hook": true },
+    { "papel": "lo que la gente cree, descartado, y una pista de lo que pasa de verdad, sin contarlo entero: deja la pregunta abierta", "ejemplo": "No es que la cebolla tenga algo que pica: lo fabrica justo cuando la cortas.", "hook": true },
+    { "papel": "dónde pasa: la cosa por dentro, o el sitio del mecanismo, con lo que hay ahí", "ejemplo": "Por dentro, la cebolla está hecha de bolsitas diminutas, y cada una guarda dos cosas por separado." },
+    { "papel": "la causa y su efecto, en orden: lo que pasa cuando se rompe lo normal", "ejemplo": "Cuando el cuchillo rompe una bolsita, las dos se mezclan, y al momento sale volando un gas." },
+    { "papel": "la comparación con algo de casa que funciona igual, con su frase entera", "ejemplo": "Es como una pulsera de luz: dos líquidos separados que solo se encienden cuando la doblas y se mezclan." },
+    { "papel": "adónde llega el efecto: lo que le hace a quien mira", "ejemplo": "Ese gas sube hasta tus ojos y les pica." },
+    { "papel": "la respuesta que se ve: lo que pasa por fin, lo que pregunta el hook", "ejemplo": "Y tus ojos hacen lo único que saben: echar lágrimas para lavarlo." },
+    { "papel": "el porqué de fondo: para qué existe esto, lo que nadie se pregunta", "ejemplo": "La cebolla no lo hace por fastidiar: es como se defiende de los animales que la muerden." },
+    { "papel": "el remate: contesta del todo la pregunta y le da la vuelta a lo que creía quien mira", "ejemplo": "Así que no es la cebolla la que te hace llorar: eres tú, que con el cuchillo disparas su defensa." },
+    { "papel": "el cierre del creador, de preferencias.md, tal cual", "ejemplo": "Envíaselo a ese amigo que siempre dice que no está llorando, que es la cebolla." }
+  ],
+  "plan": [
+    "La pregunta pasando, exagerada y enorme desde el fotograma 0 (un cuchillo gigante cae sobre la cebolla y una nube sale disparada hacia la cámara, que retrocede de golpe). Si la pregunta pasa por dos sitios, corte en la palabra que trae el segundo.",
+    "Lo que se cree se descarta como una acción y aparece lo que pasa de verdad, a medias (la cebolla entera no suelta nada; en «cortas», el corte suelta un hilo de gas). Mismo sitio: la cámara se acerca, no corta.",
+    "Corte al sitio del mecanismo en la palabra que lo trae, solo cuando la voz habla de él (dentro de la cebolla, bolsitas de luz, cada una con sus dos cosas de dos colores en dos lados). La cámara entra despacio entre ellas.",
+    "La causa pasa delante y en la palabra clave sale el efecto (el filo rompe una bolsita, los dos colores se juntan y en «gas» sube una nube). La cámara sigue a lo que sale; lo que estalla acaba y reposa antes del corte.",
+    "Corte a la comparación de casa, en su sitio y con su frase entera (una pulsera de luz que se dobla, cruje y se enciende). Cámara casi quieta; reposa antes de volver.",
+    "Corte siguiendo al efecto hasta quien lo sufre (la nube sube hacia un ojo enorme, que se pone rojo). La cámara sube con lo que viaja.",
+    "La respuesta, grande y en su palabra (el ojo se llena de lágrimas que rebosan y se llevan el gas). Mismo sitio: la cámara se aleja un poco, sin cortar.",
+    "Otro sitio, con algo vivo haciendo lo que dice la voz (en el huerto, un bicho muerde una cebolla, sale la nube y huye). Corte en la palabra que lo trae.",
+    "El remate vuelve a la imagen del hook con lo que ahora se sabe (el cuchillo cae otra vez y se ve la defensa que dispara). La cámara se aleja despacio y la imagen reposa.",
+    "El cierre, con la cosa del vídeo una última vez mientras la cámara se aleja; el último fotograma enlaza con el primero (la cebolla entera, esperando al cuchillo)."
+  ]
+}

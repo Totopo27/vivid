@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Elige tu voz</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%2355cfa8'/%3E%3Crect x='9.5' y='5' width='5' height='9' rx='2.5' fill='none' stroke='%2306251c' stroke-width='2'/%3E%3Cpath d='M7 11.5a5 5 0 0 0 10 0M12 16.5V19' stroke='%2306251c' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<!-- La página de motor/voces.mjs: la sirve este ordenador (127.0.0.1). La clave nunca llega aquí: las voces se las pide
+     voces.mjs a ElevenLabs. Solo suenan las muestras (https). __NONCE__, __TOKEN__, __IDIOMA__, __CODIGO__ y __ACTUAL__
+     los pone voces.mjs al servirla. Lo que llega de ElevenLabs se pinta siempre como texto (textContent), nunca como HTML. -->
+<style nonce="__NONCE__">
+  :root {
+    color-scheme: dark;
+    --fondo: #090b10; --superficie: #11151d; --superficie-2: #171c26; --linea: #273041;
+    --texto: #f4f6fa; --suave: #a8b0bf; --tenue: #7a8496;
+    --acento: #8be0c4; --boton: #55cfa8; --boton-tinta: #06251c; --acento-velo: rgba(139, 224, 196, .09); --acento-borde: rgba(139, 224, 196, .3);
+    --aviso: #f4bd76; --aviso-velo: rgba(244, 189, 118, .08); --aviso-borde: rgba(244, 189, 118, .3);
+    --error: #ff9b9b; --error-velo: rgba(255, 120, 120, .09);
+    --sombra: 0 24px 70px rgba(0, 0, 0, .35);
+    --sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      color-scheme: light;
+      --fondo: #f4f6f9; --superficie: #ffffff; --superficie-2: #f1f4f8; --linea: #dce2ea;
+      --texto: #111827; --suave: #4b5563; --tenue: #6b7280;
+      --acento: #0e7d5d; --boton: #0e7d5d; --boton-tinta: #ffffff; --acento-velo: rgba(14, 125, 93, .07); --acento-borde: rgba(14, 125, 93, .28);
+      --aviso: #8a5300; --aviso-velo: rgba(234, 160, 40, .1); --aviso-borde: rgba(200, 130, 20, .32);
+      --error: #b4232a; --error-velo: rgba(192, 38, 45, .07);
+      --sombra: 0 18px 50px rgba(17, 24, 39, .08);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; color: var(--texto); font: 16px/1.55 var(--sans); -webkit-font-smoothing: antialiased;
+    background: radial-gradient(circle at 10% -5%, var(--acento-velo), transparent 30rem), radial-gradient(circle at 95% 10%, rgba(102, 126, 234, .08), transparent 26rem), var(--fondo);
+  }
+  svg { width: 1.15em; height: 1.15em; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+  .simbolos { position: absolute; }
+  .envoltura { width: min(100% - 32px, 1100px); margin-inline: auto; }
+  button, input, select { font: inherit; color: inherit; }
+
+  /* --- la cabecera */
+  .cabeza { padding: 52px 0 26px; text-align: center; }
+  .icono-grande { display: inline-grid; place-items: center; width: 56px; height: 56px; border-radius: 16px; background: var(--boton); color: var(--boton-tinta); box-shadow: 0 10px 30px rgba(85, 207, 168, .25); }
+  .icono-grande svg { width: 28px; height: 28px; }
+  .antetitulo { margin: 18px 0 6px; color: var(--acento); font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+  h1 { margin: 0 auto; max-width: 720px; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.08; letter-spacing: -.035em; }
+  .entrada { max-width: 620px; margin: 14px auto 0; color: var(--suave); font-size: 1.06rem; }
+  .entrada strong { color: var(--texto); }
+  .sellos { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 22px 0 0; padding: 0; list-style: none; }
+  .sellos li { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border: 1px solid var(--acento-borde); border-radius: 999px; background: var(--acento-velo); font-size: .9rem; font-weight: 650; }
+  .sellos svg { color: var(--acento); }
+  .sellos .aviso-voz { border-color: var(--aviso-borde); background: var(--aviso-velo); }
+  .sellos .aviso-voz svg { color: var(--aviso); }
+
+  /* --- la barra: pestañas y filtros */
+  .barra { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 14px; border: 1px solid var(--linea); border-radius: 18px; background: var(--superficie); box-shadow: var(--sombra); }
+  .pestanas { display: flex; gap: 6px; padding: 5px; border-radius: 13px; background: var(--fondo); }
+  .pestana { border: 0; border-radius: 9px; padding: 9px 14px; background: transparent; color: var(--suave); font-weight: 700; cursor: pointer; }
+  .pestana[aria-selected="true"] { background: var(--boton); color: var(--boton-tinta); }
+  .pestana:focus-visible, .filtro:focus-visible, .play:focus-visible, .usar:focus-visible, .mas:focus-visible { outline: 3px solid var(--acento-borde); outline-offset: 2px; }
+  .buscar { flex: 1 1 220px; display: flex; align-items: center; gap: 8px; min-width: 0; padding: 0 12px; border: 1.5px solid var(--linea); border-radius: 12px; background: var(--superficie-2); }
+  .buscar:focus-within { border-color: var(--acento); }
+  .buscar svg { color: var(--tenue); }
+  .buscar input { flex: 1; min-width: 0; padding: 10px 0; border: 0; outline: 0; background: transparent; }
+  .filtro { padding: 10px 12px; border: 1.5px solid var(--linea); border-radius: 12px; background: var(--superficie-2); cursor: pointer; }
+  .nota { display: flex; gap: 10px; margin: 14px 0 0; padding: 12px 14px; border: 1px solid var(--linea); border-radius: 12px; background: var(--superficie-2); color: var(--suave); font-size: .9rem; }
+  .nota svg { margin-top: .15em; color: var(--tenue); }
+  .nota[hidden] { display: none; }
+
+  /* --- las voces */
+  .voces { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); margin: 18px 0 0; padding: 0; list-style: none; }
+  .voz { display: flex; flex-direction: column; gap: 10px; padding: 16px; border: 1px solid var(--linea); border-radius: 16px; background: var(--superficie); transition: border-color .15s; }
+  .voz:hover { border-color: var(--acento-borde); }
+  .voz.en-uso { border-color: var(--acento); box-shadow: 0 0 0 3px var(--acento-velo); }
+  .voz-cabeza { display: flex; align-items: center; gap: 12px; min-width: 0; }
+  .play { flex: 0 0 auto; display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; background: var(--superficie-2); color: var(--texto); cursor: pointer; }
+  .play:hover { background: var(--acento-velo); color: var(--acento); }
+  .play[aria-pressed="true"] { background: var(--boton); color: var(--boton-tinta); }
+  .play[disabled] { opacity: .4; cursor: not-allowed; }
+  .play .pausa, .play[aria-pressed="true"] .triangulo { display: none; }
+  .play[aria-pressed="true"] .pausa { display: inline; }
+  .voz h3 { margin: 0; overflow: hidden; font-size: 1rem; line-height: 1.3; text-overflow: ellipsis; white-space: nowrap; }
+  .etiquetas { margin: 2px 0 0; color: var(--tenue); font-size: .82rem; }
+  .voz-texto { min-width: 0; flex: 1; }
+  .desc { display: -webkit-box; margin: 0; overflow: hidden; color: var(--suave); font-size: .88rem; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  .pie { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; }
+  .origen { color: var(--tenue); font-size: .78rem; font-weight: 650; }
+  .en-uso .origen { color: var(--acento); }
+  .usar { display: inline-flex; align-items: center; gap: 7px; padding: 9px 14px; border: 0; border-radius: 11px; background: var(--boton); color: var(--boton-tinta); font-weight: 750; cursor: pointer; }
+  .usar:hover { filter: brightness(1.06); }
+  .usar[disabled] { opacity: .65; cursor: progress; }
+  .en-uso .usar { background: var(--superficie-2); color: var(--suave); cursor: default; filter: none; }
+  .estado { margin: 22px 0 0; color: var(--suave); text-align: center; }
+  .error { display: flex; gap: 10px; margin: 16px 0 0; padding: 12px 14px; border-radius: 12px; background: var(--error-velo); color: var(--error); font-size: .92rem; }
+  .error[hidden], .estado[hidden], .mas[hidden] { display: none; }
+  .mas { display: block; margin: 18px auto 0; padding: 11px 18px; border: 1px solid var(--linea); border-radius: 12px; background: var(--superficie); font-weight: 700; cursor: pointer; }
+
+  /* --- elegida */
+  .hecho { display: none; max-width: 560px; margin: 10px auto 0; padding: 34px 26px; border: 1px solid var(--linea); border-radius: 20px; background: var(--superficie); box-shadow: var(--sombra); text-align: center; }
+  .hecho .marca-ok { display: inline-grid; place-items: center; width: 64px; height: 64px; border-radius: 50%; background: var(--acento-velo); border: 1px solid var(--acento-borde); color: var(--acento); }
+  .hecho .marca-ok svg { width: 32px; height: 32px; stroke-width: 2.4; }
+  .hecho h2 { margin: 16px 0 0; font-size: 1.6rem; overflow-wrap: anywhere; }
+  .hecho p { margin: 10px auto 0; color: var(--suave); }
+  body[data-estado="elegida"] .hecho { display: block; }
+  body[data-estado="elegida"] .eligiendo { display: none; }
+
+  footer { padding: 30px 0 40px; color: var(--tenue); font-size: .84rem; text-align: center; }
+  @media (max-width: 520px) { .cabeza { padding-top: 34px; } .barra { padding: 12px; } .pestanas { width: 100%; } .pestana { flex: 1; } .filtro { flex: 1; } }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body data-token="__TOKEN__" data-actual="__ACTUAL__" data-estado="eligiendo">
+<svg class="simbolos" width="0" height="0" aria-hidden="true" focusable="false">
+  <symbol id="i-voz" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v3"/></symbol>
+  <symbol id="i-gratis" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.6-.9-1.7-1.5-3-1.5-1.9 0-3 1-3 2.2 0 2.9 6 1.6 6 4.6 0 1.2-1.2 2.2-3 2.2-1.4 0-2.5-.6-3.1-1.6M12 6v2M12 16v2"/><path d="m4 4 16 16"/></symbol>
+  <symbol id="i-ordenador" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2.5 19h19"/></symbol>
+  <symbol id="i-alerta" viewBox="0 0 24 24"><path d="M10.3 4.2 2.6 18a2 2 0 0 0 1.8 3h15.2a2 2 0 0 0 1.8-3L13.7 4.2a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/></symbol>
+  <symbol id="i-lupa" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5Z" fill="currentColor"/></symbol>
+  <symbol id="i-pausa" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14" stroke-width="3"/></symbol>
+  <symbol id="i-ok" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+</svg>
+
+<header class="cabeza envoltura">
+  <span class="icono-grande" aria-hidden="true"><svg><use href="#i-voz"/></svg></span>
+  <p class="antetitulo">Configuración de la voz</p>
+  <h1>Elige la voz de tus vídeos</h1>
+  <p class="entrada">Escucha las voces y pulsa <strong>Usar esta voz</strong>. Será la voz de tus vídeos en <strong>__IDIOMA__</strong>.</p>
+  <ul class="sellos">
+    <li id="ahora"><svg aria-hidden="true"><use href="#i-voz"/></svg><span>Buscando tu voz de ahora…</span></li>
+    <li><svg aria-hidden="true"><use href="#i-gratis"/></svg>Escuchar no gasta caracteres</li>
+    <li><svg aria-hidden="true"><use href="#i-ordenador"/></svg>Tu clave no sale de tu ordenador</li>
+  </ul>
+</header>
+
+<main class="envoltura">
+  <div class="eligiendo">
+    <div class="barra" role="search">
+      <div class="pestanas" role="tablist" aria-label="De dónde son las voces">
+        <button class="pestana" role="tab" type="button" id="p-cuenta" data-de="cuenta" aria-selected="true">Tus voces</button>
+        <button class="pestana" role="tab" type="button" id="p-biblioteca" data-de="biblioteca" aria-selected="false">Biblioteca de ElevenLabs</button>
+      </div>
+      <label class="buscar"><svg aria-hidden="true"><use href="#i-lupa"/></svg><input id="buscar" type="search" placeholder="Busca por nombre o estilo (narrador, joven, grave…)" aria-label="Buscar voces" autocomplete="off"></label>
+      <select class="filtro" id="genero" aria-label="Voz de">
+        <option value="">Todas</option><option value="mujer">Mujer</option><option value="hombre">Hombre</option><option value="neutra">Neutra</option>
+      </select>
+    </div>
+    <p class="nota" id="nota-biblioteca" hidden><svg aria-hidden="true"><use href="#i-info"/></svg><span>Voces que comparte la gente en ElevenLabs, en __IDIOMA__, de las más usadas a las menos. La que elijas se añade a tus voces. Con el plan gratuito de ElevenLabs no se pueden usar fuera de su web: si es tu caso, elige una de «Tus voces».</span></p>
+    <p class="error" id="error" role="alert" hidden></p>
+    <p class="estado" id="estado" role="status">Cargando voces…</p>
+    <ul class="voces" id="voces" aria-live="polite"></ul>
+    <button class="mas" id="mas" type="button" hidden>Ver más voces</button>
+  </div>
+
+  <div class="hecho" role="status">
+    <span class="marca-ok" aria-hidden="true"><svg><use href="#i-ok"/></svg></span>
+    <h2 id="elegida">Voz elegida</h2>
+    <p>Ya puedes cerrar esta pestaña y volver al chat.</p>
+  </div>
+</main>
+
+<footer class="envoltura">Esta página funciona en tu ordenador y se cierra sola al elegir la voz (o a los 15 minutos).</footer>
+
+<script nonce="__NONCE__">
+  // Las voces llegan de voces.mjs (que se las pide a ElevenLabs con la clave, sin traerla aquí). Todo lo que viene de
+  // ElevenLabs se pone con textContent: los nombres y las descripciones de la biblioteca los escribe cualquiera.
+  const $ = (id) => document.getElementById(id), TOKEN = document.body.dataset.token, ACTUAL = document.body.dataset.actual;
+  const lista = $("voces"), estado = $("estado"), error = $("error"), mas = $("mas"), buscar = $("buscar"), genero = $("genero");
+  const audio = new Audio();
+  let de = "cuenta", pagina = 0, pedida = 0, sonando = null;
+
+  function el(tag, props = {}, ...hijos) {
+    const e = document.createElement(tag);
+    for (const [k, v] of Object.entries(props)) if (k === "texto") e.textContent = v; else if (k.startsWith("data-") || k.startsWith("aria-")) e.setAttribute(k, v); else e[k] = v;
+    for (const h of hijos) if (h) e.append(h);
+    return e;
+  }
+  function icono(id, clase) {
+    const s = document.createElementNS("http://www.w3.org/2000/svg", "svg"), u = document.createElementNS("http://www.w3.org/2000/svg", "use");
+    u.setAttribute("href", "#" + id); s.append(u); s.setAttribute("aria-hidden", "true"); if (clase) s.setAttribute("class", clase);
+    return s;
+  }
+  const di = (t) => { estado.hidden = !t; estado.textContent = t || ""; };
+  const mal = (t) => { error.hidden = !t; error.textContent = t || ""; };
+
+  function parar() { audio.pause(); if (sonando) sonando.setAttribute("aria-pressed", "false"); sonando = null; }
+  audio.addEventListener("ended", parar);
+  audio.addEventListener("error", () => { if (sonando) { mal("Esa muestra no se puede escuchar ahora."); parar(); } });
+
+  function tarjeta(v) {
+    const enUso = v.id === ACTUAL;
+    const play = el("button", { type: "button", className: "play", "aria-pressed": "false", "aria-label": "Escuchar " + v.nombre, disabled: !v.muestra },
+      icono("i-play", "triangulo"), icono("i-pausa", "pausa"));
+    play.addEventListener("click", () => {
+      if (sonando === play) return parar();
+      parar(); mal("");
+      audio.src = v.muestra; audio.play().catch(() => {});
+      sonando = play; play.setAttribute("aria-pressed", "true");
+    });
+    const usar = el("button", { type: "button", className: "usar", disabled: enUso }, el("span", { texto: enUso ? "En uso" : "Usar esta voz" }));
+    if (!enUso) usar.addEventListener("click", () => elegir(v, usar));
+    const etiquetas = [v.genero, v.edad, v.acento && "acento " + v.acento, v.uso].filter(Boolean).join(" · ");
+    return el("li", { className: "voz" + (enUso ? " en-uso" : "") },
+      el("div", { className: "voz-cabeza" }, play, el("div", { className: "voz-texto" }, el("h3", { texto: v.nombre, title: v.nombre }), etiquetas && el("p", { className: "etiquetas", texto: etiquetas }))),
+      v.descripcion && el("p", { className: "desc", texto: v.descripcion }),
+      el("div", { className: "pie" }, el("span", { className: "origen", texto: enUso ? "La de ahora" : v.biblioteca ? "Se añade a tus voces" : "En tu cuenta" }), usar));
+  }
+
+  async function cargar(otra = false) {
+    const n = ++pedida;
+    if (!otra) { pagina = 0; lista.replaceChildren(); }
+    di("Cargando voces…"); mal(""); mas.hidden = true;
+    const q = new URLSearchParams({ de, buscar: buscar.value.trim(), genero: genero.value, pagina: String(pagina) });
+    try {
+      const r = await (await fetch("/voces?" + q)).json();
+      if (n !== pedida) return; // ya se pidió otra cosa
+      if (r.error) mal(r.error);
+      for (const v of r.voces || []) lista.append(tarjeta(v));
+      if (de === "cuenta") marcarActual(r.voces || []);
+      di(lista.children.length ? "" : r.error ? "" : "No hay voces con eso.");
+      mas.hidden = !(de === "biblioteca" && r.mas);
+    } catch { if (n === pedida) { di(""); mal("No llego a la página: vuelve a abrirla desde el chat."); } }
+  }
+
+  // Cuál es la de ahora, si está en la cuenta (si no, la voz fallaría: hay que elegir una).
+  let actualVista = false;
+  function marcarActual(voces) {
+    if (actualVista || buscar.value || genero.value) return;
+    actualVista = true;
+    const v = voces.find((x) => x.id === ACTUAL), ahora = $("ahora");
+    if (v) ahora.querySelector("span").textContent = "Ahora: " + v.nombre;
+    else { ahora.classList.add("aviso-voz"); ahora.replaceChildren(icono("i-alerta"), el("span", { texto: "Tu voz de ahora no está en tu cuenta: elige una" })); }
+  }
+
+  async function elegir(v, boton) {
+    parar(); mal("");
+    document.querySelectorAll(".usar").forEach((b) => (b.disabled = true));
+    boton.querySelector("span").textContent = v.biblioteca ? "Añadiendo…" : "Guardando…";
+    try {
+      const r = await (await fetch("/usar", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ t: TOKEN, id: v.id, dueno: v.dueno, nombre: v.nombre, biblioteca: v.biblioteca }) })).json();
+      if (!r.ok) throw new Error(r.error || "No se ha podido elegir.");
+      $("elegida").textContent = "Voz elegida: " + r.nombre;
+      document.body.dataset.estado = "elegida";
+      window.scrollTo({ top: 0 });
+    } catch (e) {
+      mal(e.message);
+      document.querySelectorAll(".voz:not(.en-uso) .usar").forEach((b) => { b.disabled = false; b.querySelector("span").textContent = "Usar esta voz"; });
+    }
+  }
+
+  document.querySelectorAll(".pestana").forEach((p) => p.addEventListener("click", () => {
+    de = p.dataset.de;
+    document.querySelectorAll(".pestana").forEach((x) => x.setAttribute("aria-selected", String(x === p)));
+    $("nota-biblioteca").hidden = de !== "biblioteca";
+    parar(); cargar();
+  }));
+  let espera;
+  buscar.addEventListener("input", () => { clearTimeout(espera); espera = setTimeout(() => cargar(), 350); });
+  genero.addEventListener("change", () => cargar());
+  mas.addEventListener("click", () => { pagina++; cargar(true); });
+  cargar();
+</script>
+</body>
+</html>

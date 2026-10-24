@@ -1,0 +1,31 @@
+{
+  "nombre": "imposible",
+  "titulo": "Lo imposible",
+  "para": "Cuando la idea es una cosa real que parece que no debería existir (un animal, una estrella, un sitio) y se puede enseñar en su mejor momento.",
+  "frases": [
+    { "papel": "lo imposible, primero y sin rodeos, con el nombre de la cosa", "ejemplo": "Esta medusa nunca se muere de vieja.", "hook": true },
+    { "papel": "la regla que rompe, demostrada con cosas que el que mira conoce (tres como mucho)", "ejemplo": "Un perro, un pájaro, tú: todos nos hacemos viejos y nos morimos.", "hook": true },
+    { "papel": "la pregunta que queda abierta, corta", "ejemplo": "¿Cómo se libra ella?", "hook": true },
+    { "papel": "la primera respuesta, corta y rara", "ejemplo": "Volviendo a ser un bebé." },
+    { "papel": "lo que es, con una cosa de casa que le da el tamaño o el peso", "ejemplo": "Es la medusa inmortal, y es más pequeña que la uña de tu meñique." },
+    { "papel": "la causa, paso a paso: lo primero que pasa", "ejemplo": "Cuando se hace vieja o le hacen daño, recoge sus tentáculos, deja de nadar y cae al fondo." },
+    { "papel": "el mecanismo: la transformación, entera y delante de la cámara", "ejemplo": "Allí se convierte en una bolita, que se agarra al suelo y echa ramas, como una planta." },
+    { "papel": "la respuesta que se ve: lo que sale de todo eso", "ejemplo": "Y de esas ramas brotan medusas nuevas, iguales que ella, que se van nadando." },
+    { "papel": "la comparación con algo que todo el mundo conoce, con su frase entera", "ejemplo": "Es como si una mariposa, al hacerse vieja, volviera a ser oruga." },
+    { "papel": "el remate: da la vuelta al hook (lo imposible, explicado, se vuelve otra cosa)", "ejemplo": "Así que para ella, hacerse vieja no es el final: es la señal para volver a empezar." },
+    { "papel": "el cierre del creador, de preferencias.md, tal cual", "ejemplo": "Envíaselo a ese amigo que dice que ya es tarde para empezar de cero." }
+  ],
+  "plan": [
+    "La cosa imposible en su mejor momento, enorme y moviéndose desde el fotograma 0 (la medusa latiendo pegada a la cámara, transparente, con su estómago rojo encendido); la cámara se aleja hasta verla entera. Sigue.",
+    "La regla, demostrada: llegan las cosas normales, frenan y se quedan a su lado haciendo lo normal, y se van sumando (un perro, un pájaro y una persona envejecen a la vez); ella, igual que antes. La cámara gira despacio alrededor. Sigue.",
+    "La cámara se lanza hacia la cosa y se para pegada a ella en la palabra que la señala. Sigue, sin corte.",
+    "La primera respuesta pasa delante de la cámara (la medusa se encoge y se queda pequeñita). Otro tiempo de la misma cosa no es otro sitio: cambia delante de la cámara, sin cortar.",
+    "Una cosa de casa llega y se para a su lado para dar el tamaño (la uña de un meñique, enorme, junto a la medusa). La cámara se corre para que quepan las dos. Sigue.",
+    "La causa en el sitio de la cosa, paso a paso (recoge los tentáculos, deja de latir y cae hacia el fondo). La cámara baja con lo que cae; lo de casa se va mientras se mueve. Sigue.",
+    "La transformación, entera y delante de la cámara (la bolita se agarra a la roca y le crecen ramas). La cámara se acerca y gira un poco para enseñar lo que crece. Sigue.",
+    "Lo que sale de ahí brota y se mueve: el segundo «¡hala!» (de las ramas salen medusas nuevas que suben nadando). La cámara sube con ellas.",
+    "Corte a la comparación, en su propio sitio y con su frase entera (en una rama, una mariposa se encoge y vuelve a ser oruga). Cámara casi quieta; reposa antes de volver.",
+    "Corte de vuelta: la cosa hace el ciclo entero, con lo que ahora se sabe (la medusa vieja cae, brota y vuelve a nadar joven). La cámara la sigue sin cortar.",
+    "El cierre: la cámara se aleja hasta ver todo su mundo con la cosa en medio, una última vez; el último fotograma enlaza con el primero."
+  ]
+}

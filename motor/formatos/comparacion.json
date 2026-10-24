@@ -1,0 +1,29 @@
+{
+  "nombre": "comparacion",
+  "titulo": "Cuál gana",
+  "para": "Cuando la idea es poner dos cosas una contra otra (cuál es más caliente, más grande, más rápida, más peligrosa) y gana la que nadie apostaría.",
+  "frases": [
+    { "papel": "la pregunta, A contra B, con sus nombres y dicha con justicia (lo que se compara de verdad)", "ejemplo": "¿Qué está más caliente: la superficie del Sol o un rayo?", "hook": true },
+    { "papel": "la favorita, en todo su tamaño o su fuerza, con algo que todos conocen", "ejemplo": "El Sol es una estrella en la que cabrían más de un millón de Tierras.", "hook": true },
+    { "papel": "el giro, en muy pocas palabras: la favorita pierde (deja la pregunta: ¿cómo?)", "ejemplo": "Y aun así, pierde.", "hook": true },
+    { "papel": "las dos cifras, frente a frente, y por cuánto gana", "ejemplo": "Su superficie está a unos 5.500 grados; un rayo calienta el aire a casi 30.000: cinco veces más." },
+    { "papel": "lo que es la ganadora, con algo de casa a su lado", "ejemplo": "Y todo ese calor va por un camino de aire tan fino como el palo de una escoba." },
+    { "papel": "el mecanismo: por qué gana, causa y efecto", "ejemplo": "Por ese hilo pasa de golpe tanta electricidad que el aire, al resistirse, se calienta." },
+    { "papel": "la comparación con algo de casa que hace lo mismo, con su frase entera", "ejemplo": "Es lo mismo que pasa en tu tostadora: la electricidad cruza unos hilos finos y se ponen al rojo." },
+    { "papel": "la consecuencia que todo el mundo conoce y nunca había entendido", "ejemplo": "Ese aire se calienta tan de golpe que explota hacia fuera: eso es el trueno." },
+    { "papel": "el remate: da la vuelta al hook (la ganadora estaba mucho más cerca de lo que creía quien mira)", "ejemplo": "Así que no hace falta ir al espacio para ver algo más caliente que el Sol por fuera: basta con una tormenta." },
+    { "papel": "el cierre del creador, de preferencias.md, tal cual", "ejemplo": "Envíaselo a ese amigo que en cada tormenta se esconde debajo de la manta." }
+  ],
+  "plan": [
+    "Las dos cosas cara a cara desde el fotograma 0, llenando la pantalla, en un solo sitio y nunca partida en dos con rótulos (el Sol hirviendo enorme y un rayo que cae delante de él, de arriba abajo). Sigue.",
+    "La favorita crece y se demuestra con lo que todos conocen (la cámara se aleja y un enjambre de Tierras se mete dentro del Sol). Sigue.",
+    "En «pierde», la otra le gana como una acción (otro rayo cae delante y su luz deja al Sol en sombra). Reposa un momento.",
+    "Las cifras, con algo que se sienta, en el mismo sitio (junto a cada uno, una columna de luz sube a la vez; la del rayo llega cinco veces más alto). Sigue.",
+    "La ganadora de cerca, con lo de casa a su lado (el hilo del rayo, quieto un instante, junto a un palo de escoba del mismo grosor). Corte solo si lo de casa está en otro sitio.",
+    "El mecanismo, pasando (la electricidad entra a borbotones por el hilo de aire y lo pone blanco). La cámara viaja a lo largo del rayo.",
+    "Corte a la comparación de casa, en su sitio y con su frase entera (en una cocina a oscuras, los hilos de una tostadora se ponen al rojo). Casi quieta; reposa antes de volver.",
+    "Corte a la consecuencia, grande (el aire revienta hacia fuera en una onda: el trueno, y tiemblan los cristales de una ventana). Reposa.",
+    "Corte al remate: la ganadora donde la tiene quien mira (una tormenta sobre una ciudad de noche, rayo tras rayo). La cámara se aleja despacio.",
+    "El cierre: las dos juntas una última vez (el Sol sale entre las nubes de la tormenta); el último fotograma enlaza con el primero."
+  ]
+}

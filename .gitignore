@@ -1,0 +1,48 @@
+# Dependencias
+node_modules/
+
+# Variables de entorno y credenciales
+.env
+.env.local
+.env.*
+!.env.example
+*.key
+*.pem
+*.cert
+
+# Datos y configuración del creador (privado por usuario)
+preferencias.md
+marca.json
+maquina.md
+
+# Carpetas de trabajo (mantener solo .gitkeep)
+proyectos/*
+!proyectos/.gitkeep
+salida/*
+!salida/.gitkeep
+
+# Artefactos temporales de render, pruebas y revisiones
+pruebas/diferencias/*
+!pruebas/diferencias/.gitkeep
+**/revisar/.render/
+proyectos/**/revisar/
+tmp/
+temp/
+*.tmp
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Archivos de sistema operativo y editores
+.DS_Store
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
